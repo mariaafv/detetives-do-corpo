@@ -4,14 +4,14 @@ protocol InitialScreenViewModelProtocol: AnyObject {
   func didTapMissionsButton()
 }
 
-protocol InititalScreenNavigationDelegate: AnyObject {
+protocol InitialScreenNavigationDelegate: AnyObject {
   func didTapMissionsButton()
 }
 
 class InitialScreenViewModel {
-  private weak var navigationDelegate: InititalScreenNavigationDelegate?
+  private weak var navigationDelegate: InitialScreenNavigationDelegate?
   
-  init(navigationDelegate: InititalScreenNavigationDelegate?) {
+  init(navigationDelegate: InitialScreenNavigationDelegate?) {
     self.navigationDelegate = navigationDelegate
   }
 }

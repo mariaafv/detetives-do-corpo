@@ -1,45 +1,53 @@
 import UIKit
 
-class CustomButton: UIView {
-  var buttonTitle: String?
-  var background: UIColor?
+final class CustomButton: UIButton {
   
-  lazy var button: UIButton = {
-    let button = UIButton()
-    button.setTitle(buttonTitle, for: UIControl.State.normal)
-    button.backgroundColor = background
-    button.tintColor = .white
-    button.layer.cornerRadius = 24
-    button.translatesAutoresizingMaskIntoConstraints = false
-    return button
-  }()
+  private var buttonTitle: String
+  private var background: UIColor
+  private var fontColor: UIColor
   
-  init(buttonTitle: String, background: UIColor) {
-    super.init(frame: .zero)
-
+  // MARK: - Init
+  init(buttonTitle: String, background: UIColor, fontColor: UIColor) {
     self.buttonTitle = buttonTitle
     self.background = background
-    self.translatesAutoresizingMaskIntoConstraints = false
+    self.fontColor = fontColor
+    super.init(frame: .zero)
     
-    self.addSubviews()
-    self.addConstraints()
+    setupView()
   }
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func addSubviews() {
-    addSubview(button)
+  // MARK: - Setup
+  private func setupView() {
+    configure()
+    setupConstraints()
   }
   
-  func addConstraints() {
-    NSLayoutConstraint.activate([
-      button.topAnchor.constraint(equalTo: topAnchor),
-      button.leadingAnchor.constraint(equalTo: leadingAnchor),
-      button.trailingAnchor.constraint(equalTo: trailingAnchor),
-      button.bottomAnchor.constraint(equalTo: bottomAnchor),
-      button.heightAnchor.constraint(equalToConstant: 50)
-    ])
+  private func configure() {
+    // Configuração do botão
+    setTitle(buttonTitle, for: .normal)
+    backgroundColor = background
+    setTitleColor(fontColor, for: .normal)
+    layer.cornerRadius = 24
+    translatesAutoresizingMaskIntoConstraints = false
+    
+    if #available(iOS 15.0, *) {
+      var config = UIButton.Configuration.filled()
+      config.title = buttonTitle
+      config.baseBackgroundColor = background
+      config.baseForegroundColor = fontColor
+      config.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 20, bottom: 12, trailing: 20)
+      config.cornerStyle = .capsule
+      self.configuration = config
+    } else {
+      contentEdgeInsets = UIEdgeInsets(top: 12, left: 20, bottom: 12, right: 20)
+    }
+  }
+  
+  private func setupConstraints() {
+    self.heightAnchor.constraint(greaterThanOrEqualToConstant: 50).isActive = true
   }
 }

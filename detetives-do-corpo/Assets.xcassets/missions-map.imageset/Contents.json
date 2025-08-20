@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "aerial-clean-top-view-of-the-night-time-city-map-with-street-and-river-001-vector.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

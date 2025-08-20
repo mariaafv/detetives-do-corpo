@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		4CDC3EE82E54B4B1000D8311 /* detetives-do-corpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "detetives-do-corpo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CDC3EE82E54B4B1000D8311 /* detetives-do-corpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "detetives-do-corpo.app"; path = "/Users/maria/Documents/detetives-do-corpo/build/Debug-iphoneos/detetives-do-corpo.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,16 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				4CDC3EEA2E54B4B1000D8311 /* detetives-do-corpo */,
-				4CDC3EE92E54B4B1000D8311 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		4CDC3EE92E54B4B1000D8311 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4CDC3EE82E54B4B1000D8311 /* detetives-do-corpo.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,7 +99,7 @@
 			mainGroup = 4CDC3EDF2E54B4B1000D8311;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 4CDC3EE92E54B4B1000D8311 /* Products */;
+			productRefGroup = 4CDC3EDF2E54B4B1000D8311;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (

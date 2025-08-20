@@ -1,11 +1,10 @@
 import UIKit
 
-class InitialScreenViewController: UIViewController {
+class MissionsScreenViewController: UIViewController {
+  private let baseView = MissionsScreenView()
+  private let viewModel: MissionsScreenViewModelProtocol
   
-  private let baseView = InitialScreenView()
-  private let viewModel: InitialScreenViewModelProtocol
-  
-  init(viewModel: InitialScreenViewModelProtocol) {
+  init(viewModel: MissionsScreenViewModelProtocol) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
   }
@@ -25,10 +24,10 @@ class InitialScreenViewController: UIViewController {
   }
   
   func setupActions() {
-    baseView.missionsButton.button.addTarget(self, action: #selector(missionsButtonTapped), for: .touchUpInside)
+    baseView.firstMissionButton.addTarget(self, action: #selector(didTapFirstMission), for: UIControl.Event.touchUpInside)
   }
   
-  @objc func missionsButtonTapped() {
-    viewModel.didTapMissionsButton()
+  @objc func didTapFirstMission() {
+    viewModel.didTapFirstMission()
   }
 }

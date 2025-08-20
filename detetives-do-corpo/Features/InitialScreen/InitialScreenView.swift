@@ -29,17 +29,17 @@ class InitialScreenView: UIView {
   }()
   
   let missionsButton: CustomButton = {
-    let button = CustomButton(buttonTitle: "Mapa de missões", background: .brown)
+    let button = CustomButton(buttonTitle: "Mapa de missões", background: .brown, fontColor: .white)
     return button
   }()
   
   let medalsButton: CustomButton = {
-    let button = CustomButton(buttonTitle: "Medalhas", background: .brown)
+    let button = CustomButton(buttonTitle: "Medalhas", background: .brown, fontColor: .white)
     return button
   }()
   
   let emojiButton: CustomButton = {
-    let button = CustomButton(buttonTitle: "Emojômetro", background: .brown)
+    let button = CustomButton(buttonTitle: "Emojômetro", background: .brown, fontColor: .white)
     return button
   }()
   
