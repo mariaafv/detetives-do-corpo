@@ -1,11 +1,16 @@
 import UIKit
 
+extension Notification.Name {
+    static let missionsUpdated = Notification.Name("missionsUpdated")
+}
+
 final class MissionsScreenViewController: UIViewController {
   private let baseView = MissionsScreenView()
   private let viewModel: MissionsScreenViewModelProtocol
   
   init(viewModel: MissionsScreenViewModelProtocol) {
     self.viewModel = viewModel
+    NotificationCenter.default.post(name: .missionsUpdated, object: nil)
     super.init(nibName: nil, bundle: nil)
   }
   
@@ -20,6 +25,12 @@ final class MissionsScreenViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     configureCollectionView()
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(reloadMissions), name: .missionsUpdated, object: nil)
+  }
+  
+  @objc private func reloadMissions() {
+      baseView.collectionView.reloadData()
   }
   
   private func configureCollectionView() {
@@ -43,14 +54,19 @@ extension MissionsScreenViewController: UICollectionViewDataSource, UICollection
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    let missionsSelected = viewModel.missions[indexPath.item]
-    
-    guard missionsSelected.isUnlocked else {
+    guard viewModel.canNavigateToMission(at: indexPath.item) else {
         print("Missão bloqueada")
         return
     }
+
+    viewModel.getNavigationAction(for: indexPath.item)?()
     
-    missionsSelected.navigate?()
+    viewModel.markMissionsCompleted(at: indexPath.item)
+    var indexPathsToReload = [indexPath]
+    if indexPath.item + 1 < viewModel.missions.count {
+        indexPathsToReload.append(IndexPath(item: indexPath.item + 1, section: 0))
+    }
+    collectionView.reloadItems(at: indexPathsToReload)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

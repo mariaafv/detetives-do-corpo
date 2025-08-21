@@ -1,10 +1,11 @@
 import Foundation
 
 protocol FirstMissionScreenViewModelProtocol: AnyObject {
+  func didTapNextQuestion()
 }
 
 protocol FirstMissionScreenNavigationDelegate: AnyObject {
-  //code
+  func nextQuestion()
 }
 
 class FirstMissionScreenViewModel {
@@ -16,4 +17,7 @@ class FirstMissionScreenViewModel {
 }
 
 extension FirstMissionScreenViewModel: FirstMissionScreenViewModelProtocol {
+  func didTapNextQuestion() {
+    navigationDelegate?.nextQuestion()
+  }
 }

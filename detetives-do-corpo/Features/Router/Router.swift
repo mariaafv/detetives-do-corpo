@@ -52,5 +52,23 @@ extension Router: MissionsRouterProtocol {
 }
 
 extension Router: FirstMissionScreenNavigationDelegate {
-  //code
+  func nextQuestion() {
+    let viewModel = FirstMissionSecondScreenViewModel(navigationDelegate: self)
+    let viewControler = FirstMissionSecondScreenViewController(viewModel: viewModel)
+    navigationController.pushViewController(viewControler, animated: true)
+  }
+}
+
+extension Router: FirstMissionSecondScreenNavigationDelegate {
+  func goToQuestion() {
+    let viewModel = FirstMissionThirdScreenViewModel(navigationDelegate: self)
+    let viewControler = FirstMissionThirdScreenViewController(viewModel: viewModel)
+    navigationController.pushViewController(viewControler, animated: true)
+  }
+}
+
+extension Router: FirstMissionThirdScreenNavigationDelegate {
+  func goToNextQuestion() {
+    //code
+  }
 }

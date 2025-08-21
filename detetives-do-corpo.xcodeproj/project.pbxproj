@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		4CDC3EE82E54B4B1000D8311 /* detetives-do-corpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "detetives-do-corpo.app"; path = "/Users/maria/Documents/detetives-do-corpo/build/Debug-iphoneos/detetives-do-corpo.app"; sourceTree = "<absolute>"; };
+		4CDC3F392E576768000D8311 /* detetives-do-corpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "detetives-do-corpo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				4CDC3EEA2E54B4B1000D8311 /* detetives-do-corpo */,
+				4CDC3F392E576768000D8311 /* detetives-do-corpo.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +72,7 @@
 			packageProductDependencies = (
 			);
 			productName = "detetives-do-corpo";
-			productReference = 4CDC3EE82E54B4B1000D8311 /* detetives-do-corpo.app */;
+			productReference = 4CDC3F392E576768000D8311 /* detetives-do-corpo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -139,6 +140,7 @@
 				DEVELOPMENT_TEAM = 476D5DH32Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "detetives-do-corpo/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Detetives do Corpo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -166,6 +168,7 @@
 				DEVELOPMENT_TEAM = 476D5DH32Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "detetives-do-corpo/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Detetives do Corpo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

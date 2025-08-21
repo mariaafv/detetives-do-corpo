@@ -1,9 +1,16 @@
 import UIKit
 
-struct Mission {
-  let title: String
-  let description: String
-  let image: UIImage?
-  let isUnlocked: Bool
-  let navigate: (() -> Void)?
+enum MissionStatus: String, Codable {
+  case locked, unlocked, completed
+}
+
+struct Mission: Codable {
+  var title: String
+  var description: String
+  var imageName: String
+  var status: MissionStatus
+  
+  var image: UIImage? {
+    UIImage(named: imageName)
+  }
 }

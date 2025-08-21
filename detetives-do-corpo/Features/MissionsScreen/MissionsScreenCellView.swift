@@ -15,10 +15,10 @@ final class MissionCell: UICollectionViewCell {
   }
   
   override func prepareForReuse() {
-      super.prepareForReuse()
-      imageView.image = nil
-      titleLabel.text = nil
-      descriptionLabel.text = nil
+    super.prepareForReuse()
+    imageView.image = nil
+    titleLabel.text = nil
+    descriptionLabel.text = nil
   }
   
   required init?(coder: NSCoder) {
@@ -30,7 +30,14 @@ final class MissionCell: UICollectionViewCell {
     titleLabel.text = mission.title
     descriptionLabel.text = mission.description
     
-    contentView.alpha = mission.isUnlocked ? 1.0 : 0.5
+    switch mission.status {
+    case .locked:
+      contentView.alpha = 0.5
+    case .unlocked:
+      contentView.alpha = 1.0
+    case .completed:
+      contentView.alpha = 1.0
+    }
   }
   
   func configureViews() {
