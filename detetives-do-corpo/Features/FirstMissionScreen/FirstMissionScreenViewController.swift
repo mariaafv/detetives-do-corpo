@@ -20,5 +20,30 @@ class FirstMissionScreenViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupActions()
+  }
+  
+  func setupActions() {
+    baseView.firstAnswerBallon.addTarget(self, action: #selector(didTapFirstAnswer), for: UIControl.Event.touchUpInside)
+    baseView.secondAnswerBallon.addTarget(self, action: #selector(didTapSecondAnswer), for: UIControl.Event.touchUpInside)
+    baseView.thirdAnswerBallon.addTarget(self, action: #selector(didTapThirdAnswer), for: UIControl.Event.touchUpInside)
+  }
+  
+  @objc func didTapFirstAnswer() {
+    configureAnswerColors()
+  }
+  
+  @objc func didTapSecondAnswer() {
+    configureAnswerColors()
+  }
+  
+  @objc func didTapThirdAnswer() {
+    configureAnswerColors()
+  }
+  
+  func configureAnswerColors() {
+    baseView.firstAnswerBallon.updateBackgroundColor(.buttonRed)
+    baseView.secondAnswerBallon.updateBackgroundColor(.buttonGreen)
+    baseView.thirdAnswerBallon.updateBackgroundColor(.buttonRed)
   }
 }

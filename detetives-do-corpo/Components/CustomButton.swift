@@ -2,15 +2,19 @@ import UIKit
 
 final class CustomButton: UIButton {
   
-  private var buttonTitle: String
-  private var background: UIColor
-  private var fontColor: UIColor
+  var buttonTitle: String
+  var background: UIColor
+  var fontColor: UIColor
+  var alignLeft: Bool
+  var isInteractionEnable: Bool
   
   // MARK: - Init
-  init(buttonTitle: String, background: UIColor, fontColor: UIColor) {
+  init(buttonTitle: String, background: UIColor, fontColor: UIColor, alignLeft: Bool = false, isInteractionEnable: Bool = true) {
     self.buttonTitle = buttonTitle
     self.background = background
     self.fontColor = fontColor
+    self.alignLeft = alignLeft
+    self.isInteractionEnable = isInteractionEnable
     super.init(frame: .zero)
     
     setupView()
@@ -27,11 +31,22 @@ final class CustomButton: UIButton {
   }
   
   private func configure() {
-    // Configuração do botão
     setTitle(buttonTitle, for: .normal)
     backgroundColor = background
     setTitleColor(fontColor, for: .normal)
     layer.cornerRadius = 24
+    titleLabel?.numberOfLines = 0
+    titleLabel?.lineBreakMode = .byWordWrapping
+    isUserInteractionEnabled = isInteractionEnable
+    
+    if alignLeft {
+      titleLabel?.textAlignment = .left
+      contentHorizontalAlignment = .leading
+    } else {
+      titleLabel?.textAlignment = .center
+      contentHorizontalAlignment = .center
+    }
+    
     translatesAutoresizingMaskIntoConstraints = false
     
     if #available(iOS 15.0, *) {
@@ -49,5 +64,15 @@ final class CustomButton: UIButton {
   
   private func setupConstraints() {
     self.heightAnchor.constraint(greaterThanOrEqualToConstant: 50).isActive = true
+  }
+  
+  func updateBackgroundColor(_ color: UIColor) {
+    if #available(iOS 15.0, *) {
+      var config = self.configuration
+      config?.baseBackgroundColor = color
+      self.configuration = config
+    } else {
+      self.backgroundColor = color
+    }
   }
 }

@@ -16,7 +16,13 @@ class FirstMissionScreenView: UIView {
     return imageView
   }()
   
-  let historyBallon = CustomButton(buttonTitle: "Lara está muito mudada e quieta após uma festa de aniversário do primo, não quer mais brincar e não conversa com ninguém, o que você faz?", background: .white, fontColor: .black)
+  let historyBallon = CustomButton(buttonTitle: "Lara está muito mudada e quieta após uma festa de aniversário do primo, não quer mais brincar e não conversa com ninguém, o que você faz?", background: .backgroundBaloon, fontColor: .black, alignLeft: true, isInteractionEnable: false)
+  
+  let firstAnswerBallon = CustomButton(buttonTitle: "Ignora o que está acontecendo e continua brincando com seus amigos sem a Lara", background: .white, fontColor: .black, alignLeft: true)
+  
+  let secondAnswerBallon = CustomButton(buttonTitle: "Conversa com ela para tentar entender o que está acontecendo", background: .white, fontColor: .black, alignLeft: true)
+
+  let thirdAnswerBallon = CustomButton(buttonTitle: "Fala que está ali para o que ela precisar e segue brincando com seus amigos sem Lara", background: .white, fontColor: .black, alignLeft: true)
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -32,6 +38,9 @@ class FirstMissionScreenView: UIView {
     addSubview(logoImageView)
     addSubview(laraImageView)
     addSubview(historyBallon)
+    addSubview(firstAnswerBallon)
+    addSubview(secondAnswerBallon)
+    addSubview(thirdAnswerBallon)
   }
   
   func setupConstraints() {
@@ -49,7 +58,19 @@ class FirstMissionScreenView: UIView {
       
       historyBallon.topAnchor.constraint(equalTo: laraImageView.bottomAnchor, constant: 40),
       historyBallon.leadingAnchor.constraint(equalTo: laraImageView.leadingAnchor),
-      historyBallon.trailingAnchor.constraint(equalTo: laraImageView.trailingAnchor)
+      historyBallon.trailingAnchor.constraint(equalTo: laraImageView.trailingAnchor),
+      
+      firstAnswerBallon.topAnchor.constraint(equalTo: historyBallon.bottomAnchor, constant: 30),
+      firstAnswerBallon.leadingAnchor.constraint(equalTo: laraImageView.leadingAnchor),
+      firstAnswerBallon.trailingAnchor.constraint(equalTo: laraImageView.trailingAnchor),
+      
+      secondAnswerBallon.topAnchor.constraint(equalTo: firstAnswerBallon.bottomAnchor, constant: 10),
+      secondAnswerBallon.leadingAnchor.constraint(equalTo: laraImageView.leadingAnchor),
+      secondAnswerBallon.trailingAnchor.constraint(equalTo: laraImageView.trailingAnchor),
+      
+      thirdAnswerBallon.topAnchor.constraint(equalTo: secondAnswerBallon.bottomAnchor, constant: 10),
+      thirdAnswerBallon.leadingAnchor.constraint(equalTo: laraImageView.leadingAnchor),
+      thirdAnswerBallon.trailingAnchor.constraint(equalTo: laraImageView.trailingAnchor)
     ])
   }
 }
