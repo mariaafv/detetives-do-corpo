@@ -1,6 +1,6 @@
 import UIKit
 
-class MissionsScreenViewController: UIViewController {
+final class MissionsScreenViewController: UIViewController {
   private let baseView = MissionsScreenView()
   private let viewModel: MissionsScreenViewModelProtocol
   
@@ -10,24 +10,53 @@ class MissionsScreenViewController: UIViewController {
   }
   
   required init?(coder: NSCoder) {
-      fatalError("init(coder:) has not been implemented")
+    fatalError("init(coder:) has not been implemented")
   }
   
   override func loadView() {
     self.view = baseView
-    self.view.backgroundColor = .background
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    setupActions()
+    configureCollectionView()
   }
   
-  func setupActions() {
-    baseView.firstMissionButton.addTarget(self, action: #selector(didTapFirstMission), for: UIControl.Event.touchUpInside)
+  private func configureCollectionView() {
+    baseView.collectionView.dataSource = self
+    baseView.collectionView.delegate = self
+    baseView.collectionView.register(MissionCell.self, forCellWithReuseIdentifier: MissionCell.identifier)
+  }
+}
+
+extension MissionsScreenViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return viewModel.missions.count
   }
   
-  @objc func didTapFirstMission() {
-    viewModel.didTapFirstMission()
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MissionCell.identifier, for: indexPath) as? MissionCell else {
+      return UICollectionViewCell()
+    }
+    cell.configure(with: viewModel.missions[indexPath.item])
+    return cell
   }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let missionsSelected = viewModel.missions[indexPath.item]
+    
+    guard missionsSelected.isUnlocked else {
+        print("Missão bloqueada")
+        return
+    }
+    
+    missionsSelected.navigate?()
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+      let spacing: CGFloat = 8
+      let width = collectionView.bounds.width - spacing
+      return CGSize(width: width, height: 100)
+  }
+
 }

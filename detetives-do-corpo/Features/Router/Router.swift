@@ -1,6 +1,13 @@
 import Foundation
 import UIKit
 
+protocol MissionsRouterProtocol: AnyObject {
+  func navigateToFirstMission()
+  func navigateToSecondMission()
+  func navigateToThirdMission()
+  func navigateToFourthMission()
+}
+
 final class Router {
   let navigationController: UINavigationController
   
@@ -18,17 +25,29 @@ final class Router {
 
 extension Router: InitialScreenNavigationDelegate {
   func didTapMissionsButton() {
-    let viewModel = MissionsScreenViewModel(navigationDelegate: self)
+    let viewModel = MissionsScreenViewModel(router: self)
     let viewControler = MissionsScreenViewController(viewModel: viewModel)
     navigationController.pushViewController(viewControler, animated: true)
   }
 }
 
-extension Router: MissionsScreenNavigationDelegate {
-  func didTapFirstMission() {
+extension Router: MissionsRouterProtocol {
+  func navigateToFirstMission() {
     let viewModel = FirstMissionScreenViewModel(navigationDelegate: self)
     let viewControler = FirstMissionScreenViewController(viewModel: viewModel)
     navigationController.pushViewController(viewControler, animated: true)
+  }
+  
+  func navigateToSecondMission() {
+    //code
+  }
+  
+  func navigateToThirdMission() {
+    //code
+  }
+  
+  func navigateToFourthMission() {
+    //code
   }
 }
 
