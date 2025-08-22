@@ -1,4 +1,4 @@
-# 🕵️‍♂️ Missões App
+# 🕵️‍♂️ Detetives do Corpo App
 
 Um aplicativo educativo onde crianças podem completar **missões investigativas** tendo como objetivo a conscientização de assédio sexual infantil.  
 O app utiliza **Swift + UIKit** e traz uma interface interativa com **Bottom Sheets**, animações e ilustrações personalizadas.
