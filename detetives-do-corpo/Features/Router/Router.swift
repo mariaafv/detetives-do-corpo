@@ -16,8 +16,8 @@ final class Router {
   }
   
   func start() {
-    let viewModel = FirstMissionThirdScreenViewModel(navigationDelegate: self)
-    let viewController = FirstMissionThirdScreenViewController(viewModel: viewModel)
+    let viewModel = InitialScreenViewModel(navigationDelegate: self)
+    let viewController = InitialScreenViewController(viewModel: viewModel)
     navigationController.viewControllers = [viewController]
   }
 }
@@ -69,7 +69,23 @@ extension Router: FirstMissionSecondScreenNavigationDelegate {
 
 extension Router: FirstMissionThirdScreenNavigationDelegate {
   func didTapFinished() {
-      let viewModel = MissionFinishedViewModel(navigationDelegate: self)
+    showMissionFinishedBottomSheet(image: "medal1")
+  }
+
+}
+
+extension Router: MissionFinishedNavigationDelegate {
+  func backToMissionsScreen() {
+    let viewModel = MissionsScreenViewModel(router: self)
+    let viewControler = MissionsScreenViewController(viewModel: viewModel)
+    navigationController.pushViewController(viewControler, animated: true)
+  }
+}
+
+
+extension Router {
+  func showMissionFinishedBottomSheet(image: String) {
+    let viewModel = MissionFinishedViewModel(navigationDelegate: self, bannerImage: UIImage(named: image))
       let viewController = MissionFinishedViewController(viewModel: viewModel)
       
     if let sheet = viewController.sheetPresentationController {
@@ -85,9 +101,4 @@ extension Router: FirstMissionThirdScreenNavigationDelegate {
       
       navigationController.present(viewController, animated: true)
   }
-
-}
-
-extension Router: MissionFinishedNavigationDelegate {
-  //code
 }

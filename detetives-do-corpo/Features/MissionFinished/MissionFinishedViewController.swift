@@ -19,5 +19,16 @@ class MissionFinishedViewController: UIViewController {
   
   override func viewDidLoad() {
     baseView.backgroundColor = .background
+    baseView.setBannerImage(viewModel.bannerImage)
+    setupActions()
+  }
+  
+  func setupActions() {
+    baseView.returnButton.addTarget(self, action: #selector(handleReturnButtonTapped), for: .touchUpInside)
+  }
+  
+  @objc func handleReturnButtonTapped() {
+    dismiss(animated: true)
+    viewModel.backToMissionsScreen()
   }
 }

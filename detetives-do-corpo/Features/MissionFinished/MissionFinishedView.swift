@@ -12,7 +12,7 @@ class MissionFinishedView: UIView {
   }()
   
   private let bannerImageView: UIImageView = {
-    let imageView = UIImageView(image: UIImage(named: "medal1"))
+    let imageView = UIImageView()
     imageView.contentMode = .scaleAspectFit
     return imageView
   }()
@@ -61,7 +61,7 @@ class MissionFinishedView: UIView {
     descriptionLabel.setContentCompressionResistancePriority(.required, for: .vertical)
     descriptionLabel.setContentHuggingPriority(.required, for: .vertical)
     stackView.setCustomSpacing(40, after: descriptionLabel)
-
+    
     NSLayoutConstraint.activate([
       stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
       stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
@@ -70,10 +70,16 @@ class MissionFinishedView: UIView {
       
       bannerImageView.heightAnchor.constraint(lessThanOrEqualToConstant: 200),
       bannerImageView.heightAnchor.constraint(greaterThanOrEqualToConstant: 100),
-
+      
       returnButton.heightAnchor.constraint(equalToConstant: 50),
       returnButton.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 64),
       returnButton.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -64)
     ])
+  }
+}
+
+extension MissionFinishedView {
+  func setBannerImage(_ image: UIImage?) {
+    bannerImageView.image = image
   }
 }
