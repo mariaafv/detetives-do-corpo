@@ -16,8 +16,8 @@ final class Router {
   }
   
   func start() {
-    let viewModel = InitialScreenViewModel(navigationDelegate: self)
-    let viewController = InitialScreenViewController(viewModel: viewModel)
+    let viewModel = FirstMissionThirdScreenViewModel(navigationDelegate: self)
+    let viewController = FirstMissionThirdScreenViewController(viewModel: viewModel)
     navigationController.viewControllers = [viewController]
   }
 }
@@ -68,7 +68,26 @@ extension Router: FirstMissionSecondScreenNavigationDelegate {
 }
 
 extension Router: FirstMissionThirdScreenNavigationDelegate {
-  func goToNextQuestion() {
-    //code
+  func didTapFinished() {
+      let viewModel = MissionFinishedViewModel(navigationDelegate: self)
+      let viewController = MissionFinishedViewController(viewModel: viewModel)
+      
+    if let sheet = viewController.sheetPresentationController {
+        sheet.detents = [
+            .custom { _ in
+                return viewController.view.systemLayoutSizeFitting(
+                    CGSize(width: UIScreen.main.bounds.width, height: UIView.layoutFittingCompressedSize.height)
+                ).height
+            }
+        ]
+        sheet.prefersGrabberVisible = true
+    }
+      
+      navigationController.present(viewController, animated: true)
   }
+
+}
+
+extension Router: MissionFinishedNavigationDelegate {
+  //code
 }

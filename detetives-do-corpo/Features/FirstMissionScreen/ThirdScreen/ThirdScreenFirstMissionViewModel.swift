@@ -1,11 +1,11 @@
 import Foundation
 
 protocol FirstMissionThirdScreenViewModelProtocol: AnyObject {
-  func didTapNextQuestion()
+  func didTapFinished()
 }
 
 protocol FirstMissionThirdScreenNavigationDelegate: AnyObject {
-  func goToNextQuestion()
+  func didTapFinished()
 }
 
 class FirstMissionThirdScreenViewModel {
@@ -17,7 +17,7 @@ class FirstMissionThirdScreenViewModel {
 }
 
 extension FirstMissionThirdScreenViewModel: FirstMissionThirdScreenViewModelProtocol {
-  func didTapNextQuestion() {
-   // ir para uma tela de sucesso
+  func didTapFinished() {
+    navigationDelegate?.didTapFinished()
   }
 }

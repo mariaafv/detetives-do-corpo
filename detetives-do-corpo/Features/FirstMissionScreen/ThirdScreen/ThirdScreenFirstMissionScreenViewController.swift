@@ -32,21 +32,21 @@ class FirstMissionThirdScreenViewController: UIViewController {
   @objc func didTapFirstAnswer() {
     configureAnswerColors()
     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-      self.viewModel.didTapNextQuestion()
+      self.viewModel.didTapFinished()
     }
   }
   
   @objc func didTapSecondAnswer() {
     configureAnswerColors()
     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-      self.viewModel.didTapNextQuestion()
+      self.viewModel.didTapFinished()
     }
   }
   
   @objc func didTapThirdAnswer() {
     configureAnswerColors()
     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-      self.viewModel.didTapNextQuestion()
+      self.viewModel.didTapFinished()
     }
   }
   
