@@ -67,9 +67,12 @@ final class CustomButton: UIButton {
   }
   
   func updateBackgroundColor(_ color: UIColor) {
+    backgroundColor = color
     if #available(iOS 15.0, *) {
       var config = self.configuration
       config?.baseBackgroundColor = color
+      config?.background.strokeColor = color
+      config?.background.strokeWidth = 0
       self.configuration = config
     } else {
       self.backgroundColor = color
