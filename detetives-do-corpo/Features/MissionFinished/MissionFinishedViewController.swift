@@ -28,7 +28,9 @@ class MissionFinishedViewController: UIViewController {
   }
   
   @objc func handleReturnButtonTapped() {
-    dismiss(animated: true)
-    viewModel.backToMissionsScreen()
+      dismiss(animated: true) {
+          self.viewModel.backToMissionsScreen()
+      }
   }
+
 }

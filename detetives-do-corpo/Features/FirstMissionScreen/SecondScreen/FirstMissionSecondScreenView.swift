@@ -16,13 +16,13 @@ class FirstMissionSecondScreenView: UIView {
     return imageView
   }()
   
-  let historyBallon = CustomButton(buttonTitle: "Vocês conversam e ela conta que foi na festa do aniversário do primo durante o fim de semana, lá um amigo do primo a levou para uma brincadeira secreta dentro do armário da casa, o que a deixou triste. O que você faz?", background: .backgroundBaloon, fontColor: .black, alignLeft: true, isInteractionEnable: false)
+  let historyBallon = CustomButton(buttonTitle: "Vocês conversam e ela conta que foi na festa do aniversário do primo durante o fim de semana, lá um amigo do primo a levou para uma brincadeira secreta dentro do armário da casa, o que a deixou triste e com medo. O que você faz?", background: .backgroundBaloon, fontColor: .black, alignLeft: true, isInteractionEnable: false)
   
-  let firstAnswerBallon = CustomButton(buttonTitle: "Busca entender melhor que tipo de brincadeira é essa e se ela está em algum perigo", background: .white, fontColor: .black, alignLeft: true)
+  let firstAnswerBallon = CustomButton(buttonTitle: "Diz que segredos que nos machucam não são segredos bons, e que ela pode confiar em você para pedir ajuda.", background: .white, fontColor: .black, alignLeft: true)
   
-  let secondAnswerBallon = CustomButton(buttonTitle: "Fala que foi apenas uma brincadeira e ela não deveria estar triste", background: .white, fontColor: .black, alignLeft: true)
+  let secondAnswerBallon = CustomButton(buttonTitle: "Deixa para lá e diz que ela pode contar quando quiser", background: .white, fontColor: .black, alignLeft: true)
 
-  let thirdAnswerBallon = CustomButton(buttonTitle: "Fala que também quer conhecer o amigo do primo para brincarem juntos", background: .white, fontColor: .black, alignLeft: true)
+  let thirdAnswerBallon = CustomButton(buttonTitle: "Ameaça não ser mais amigo dela caso ela não conte sobre a brincadeira secreta", background: .white, fontColor: .black, alignLeft: true)
   
   override init(frame: CGRect) {
     super.init(frame: frame)

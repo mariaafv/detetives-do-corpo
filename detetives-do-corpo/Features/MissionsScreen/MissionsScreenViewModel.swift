@@ -60,8 +60,6 @@ final class MissionsScreenViewModel: MissionsScreenViewModelProtocol {
       }
       
       storage.saveMissions(missions)
-      
-      NotificationCenter.default.post(name: .missionsUpdated, object: nil)
   }
 
   

@@ -1,16 +1,17 @@
 import UIKit
 
 extension Notification.Name {
-    static let missionsUpdated = Notification.Name("missionsUpdated")
+  static let missionsUpdated = Notification.Name("missionsUpdated")
 }
 
 final class MissionsScreenViewController: UIViewController {
   private let baseView = MissionsScreenView()
-  private let viewModel: MissionsScreenViewModelProtocol
+  let viewModel: MissionsScreenViewModelProtocol
+  private let router: MissionsRouterProtocol
   
-  init(viewModel: MissionsScreenViewModelProtocol) {
+  init(viewModel: MissionsScreenViewModelProtocol, router: MissionsRouterProtocol) {
     self.viewModel = viewModel
-    NotificationCenter.default.post(name: .missionsUpdated, object: nil)
+    self.router = router
     super.init(nibName: nil, bundle: nil)
   }
   
@@ -26,11 +27,11 @@ final class MissionsScreenViewController: UIViewController {
     super.viewDidLoad()
     configureCollectionView()
     
-    NotificationCenter.default.addObserver(self, selector: #selector(reloadMissions), name: .missionsUpdated, object: nil)
+    NotificationCenter.default.addObserver(self,selector: #selector(reloadMissions),name: .missionsUpdated,object: nil)
   }
   
   @objc private func reloadMissions() {
-      baseView.collectionView.reloadData()
+    baseView.collectionView.reloadData()
   }
   
   private func configureCollectionView() {
@@ -46,7 +47,7 @@ extension MissionsScreenViewController: UICollectionViewDataSource, UICollection
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MissionCell.identifier, for: indexPath) as? MissionCell else {
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MissionCell.identifier,for: indexPath) as? MissionCell else {
       return UICollectionViewCell()
     }
     cell.configure(with: viewModel.missions[indexPath.item])
@@ -55,24 +56,21 @@ extension MissionsScreenViewController: UICollectionViewDataSource, UICollection
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     guard viewModel.canNavigateToMission(at: indexPath.item) else {
-        print("Missão bloqueada")
-        return
+      print("Missão bloqueada")
+      return
     }
-
+    
     viewModel.getNavigationAction(for: indexPath.item)?()
     
-    viewModel.markMissionsCompleted(at: indexPath.item)
-    var indexPathsToReload = [indexPath]
-    if indexPath.item + 1 < viewModel.missions.count {
-        indexPathsToReload.append(IndexPath(item: indexPath.item + 1, section: 0))
-    }
-    collectionView.reloadItems(at: indexPathsToReload)
+//    let mission = viewModel.missions[indexPath.item]
+//    router.showMissionFinishedBottomSheet(image: mission.imageName,
+//                                          missionIndex: indexPath.item,
+//                                          missionsViewModel: viewModel)
   }
   
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-      let spacing: CGFloat = 8
-      let width = collectionView.bounds.width - spacing
-      return CGSize(width: width, height: 100)
+  func collectionView(_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    let spacing: CGFloat = 8
+    let width = collectionView.bounds.width - spacing
+    return CGSize(width: width, height: 100)
   }
-
 }

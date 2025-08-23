@@ -18,11 +18,11 @@ class FirstMissionScreenView: UIView {
   
   let historyBallon = CustomButton(buttonTitle: "Lara está muito mudada e quieta após uma festa de aniversário do primo, não quer mais brincar e não conversa com ninguém, o que você faz?", background: .backgroundBaloon, fontColor: .black, alignLeft: true, isInteractionEnable: false)
   
-  let firstAnswerBallon = CustomButton(buttonTitle: "Ignora o que está acontecendo e continua brincando com seus amigos sem a Lara", background: .white, fontColor: .black, alignLeft: true)
+  let firstAnswerBallon = CustomButton(buttonTitle: "Ignora e pensa que ela está com sono", background: .white, fontColor: .black, alignLeft: true)
   
   let secondAnswerBallon = CustomButton(buttonTitle: "Conversa com ela para tentar entender o que está acontecendo", background: .white, fontColor: .black, alignLeft: true)
 
-  let thirdAnswerBallon = CustomButton(buttonTitle: "Fala que está ali para o que ela precisar e segue brincando com seus amigos sem Lara", background: .white, fontColor: .black, alignLeft: true)
+  let thirdAnswerBallon = CustomButton(buttonTitle: "Conta para os outros amigos para ver se alguém sabe o que aconteceu", background: .white, fontColor: .black, alignLeft: true)
   
   override init(frame: CGRect) {
     super.init(frame: frame)

@@ -16,13 +16,13 @@ class FirstMissionThirdScreenView: UIView {
     return imageView
   }()
   
-  let historyBallon = CustomButton(buttonTitle: "Lara diz que não quer contar o que aconteceu, mas deixa claro que ele a machucou e que está triste. O que você faz?", background: .backgroundBaloon, fontColor: .black, alignLeft: true, isInteractionEnable: false)
+  let historyBallon = CustomButton(buttonTitle: "Lara finalmente confessa o que aconteceu, o amigo do primo a tocou de forma inprópria e ela ficou muito assustada. O que você faz?", background: .backgroundBaloon, fontColor: .black, alignLeft: true, isInteractionEnable: false)
   
-  let firstAnswerBallon = CustomButton(buttonTitle: "Convida Lara para juntos conversarem com a professora e falar sobre o que aconteceu", background: .white, fontColor: .black, alignLeft: true)
+  let firstAnswerBallon = CustomButton(buttonTitle: "Juntos, vocês procuram um adulto de confiança para contar o que aconteceu", background: .white, fontColor: .black, alignLeft: true)
   
-  let secondAnswerBallon = CustomButton(buttonTitle: "Deixa o assunto de lado já que ela não quer conversar sobre", background: .white, fontColor: .black, alignLeft: true)
+  let secondAnswerBallon = CustomButton(buttonTitle: "Ir brigar com a pessoa que fez isso", background: .white, fontColor: .black, alignLeft: true)
 
-  let thirdAnswerBallon = CustomButton(buttonTitle: "Volta a brincar com seus amigos", background: .white, fontColor: .black, alignLeft: true)
+  let thirdAnswerBallon = CustomButton(buttonTitle: "Prometer à Lara que não vai contar para ninguém", background: .white, fontColor: .black, alignLeft: true)
   
   override init(frame: CGRect) {
     super.init(frame: frame)
