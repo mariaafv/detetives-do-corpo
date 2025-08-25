@@ -2,7 +2,14 @@ import UIKit
 
 final class CustomButton: UIButton {
   
-  var buttonTitle: String
+  var buttonTitle: String {
+     didSet {
+       setTitle(buttonTitle, for: .normal)
+       if #available(iOS 15.0, *) {
+         configuration?.title = buttonTitle
+       }
+     }
+   }
   var background: UIColor
   var fontColor: UIColor
   var alignLeft: Bool

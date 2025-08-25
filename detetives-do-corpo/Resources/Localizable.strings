@@ -1,2 +1,48 @@
-"teste" = "teste";
+"welcomedetective" = "Seja bem-vindo, detetive!";
+"missionsMap" = "Mapa de missões";
+"medals" = "Medalhas";
+"whoAreWe" = "Quem somos?";
+"blocked" = "Bloqueada";
+"available" = "Disponível";
+"firstMissionTitle" = "Missão 1: O segredo do armário";
+"secondMissionTitle" = "Missão 2: O toque da festa";
+"thirdMissionTitle" = "Missão 3: O jogo da confusão";
+"fourthMissionTitle" = "Missão 4: A festa do primo";
 
+// MISSION 1
+
+"1stMissionFirstBaloonHistory" = "Lara está muito mudada e quieta após uma festa de aniversário do primo, não quer mais brincar e não conversa com ninguém, o que você faz?";
+"1stMissionFirstAnswerBaloon" = "Ignora Lara e pensa que ela está apenas com sono";
+"1stMissionSecondAnswerBaloon" = "Conversa com ela para tentar entender o que está acontecendo";
+"1stMissionThirdAnswerBaloon" = "Conta para os outros amigos para ver se alguém sabe o que aconteceu";
+
+"1stMissionSecondScreenFirstBaloonHistory" = "Vocês conversam e ela conta que foi na festa do aniversário do primo durante o fim de semana, lá um amigo do primo a levou para uma brincadeira secreta dentro do armário da casa, o que a deixou triste e com medo. O que você faz?";
+"1stMissionSecondScreenFirstAnswerBaloon" = "Diz que segredos que nos machucam não são segredos bons, e que ela pode confiar em você para pedir ajuda.";
+"1stMissionSecondScreenSecondAnswerBaloon" = "Deixa para lá e diz que ela pode contar quando quiser";
+"1stMissionSecondScreenThirdAnswerBaloon" = "Ameaça não ser mais amigo dela caso ela não conte sobre a brincadeira secreta";
+
+"1stMissionThirdScreenFirstBaloonHistory" = "Lara finalmente confessa o que aconteceu, o amigo do primo a tocou de forma inprópria e ela ficou muito assustada. O que você faz?";
+"1stMissionThirdScreenFirstAnswerBaloon" = "Juntos, vocês procuram um adulto de confiança para contar o que aconteceu";
+"1stMissionThirdScreenSecondAnswerBaloon" = "Ir brigar com a pessoa que fez isso";
+"1stMissionThirdScreenThirdAnswerBaloon" = "Prometer à Lara que não vai contar para ninguém";
+
+"congratulationsYouAndLara" = "Parabéns! Você e Lara conversaram com um adulto responsável e com isso ela está se sentindo mais segura.\n\n Você é um bom amigo e ganhou uma medalha!";
+
+// MISSION 2
+
+"2ndMissionFirstBaloonHistory" = "Você está em uma festa animada, onde todos seus amigos estão brincando, durante a brincadeira, seu tio aparece e tenta te dar um beijo e um abraço, mas você fica desconfortável. O que você faz?";
+"2ndMissionFirstAnswerBaloon" = "Você sai correndo e continua brincando com seus amigos";
+"2ndMissionSecondAnswerBaloon" = "Finge que está confortável para não ser mal educado";
+"2ndMissionThirdAnswerBaloon" = "Você diz que não quer um beijo no momento e agradece o tio";
+
+"2ndMissionSecondScreenBaloonHistory" = "Mesmo você dizendo que não quer um beijo, seu tio volta a se aproximar e tenta te abraçar. O que você faz?";
+"2ndMissionSecondScreenFirstAnswerBaloon" = "Ficar parado e não fazer nada";
+"2ndMissionSecondScreenSecondAnswerBaloon" = "Sai de perto e procura um adulto de confiança";
+"2ndMissionSecondScreenThirdAnswerBaloon" = "Finge que está tudo bem e da risada";
+
+"2ndMissionThirdScreenBaloonHistory" = "Você escolhe sair de perto e ir procurar a ajuda de alguém confiável, com quem você vai falar?";
+"2ndMissionThirdScreenFirstAnswerBaloon" = "Sua mãe ou seu pai";
+"2ndMissionThirdScreenSecondAnswerBaloon" = "Um amigo da mesma idade";
+"2ndMissionThirdScreenThirdAnswerBaloon" = "A pessoa mais próxima que você encontra";
+
+"congratulationsYouSaidNo" = "Parabéns! Você soube como impor limites à um adulto inconveniente.\n\n Você é uma pessoa responsável e ganhou uma medalha!";

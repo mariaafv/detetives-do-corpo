@@ -18,8 +18,10 @@ class MissionFinishedViewController: UIViewController {
   }
   
   override func viewDidLoad() {
+    setupNavigationBar()
     baseView.backgroundColor = .background
     baseView.setBannerImage(viewModel.bannerImage)
+    baseView.descriptionLabel.text = viewModel.medalDescription
     setupActions()
   }
   
@@ -33,4 +35,7 @@ class MissionFinishedViewController: UIViewController {
       }
   }
 
+  func setupNavigationBar() {
+    navigationController?.navigationBar.isHidden = true
+  }
 }

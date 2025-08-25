@@ -11,7 +11,7 @@ class InitialScreenView: UIView {
   
   private let welcomeLabel: UILabel = {
     let label = UILabel()
-    label.text = "Seja bem-vindo, detetive!"
+    label.text = L10n.welcomedetective
     label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
     label.textColor = .black
     label.textAlignment = .center
@@ -29,17 +29,17 @@ class InitialScreenView: UIView {
   }()
   
   let missionsButton: CustomButton = {
-    let button = CustomButton(buttonTitle: "Mapa de missões", background: .brown, fontColor: .white)
+    let button = CustomButton(buttonTitle: L10n.missionsMap, background: .brown, fontColor: .white)
     return button
   }()
   
   let medalsButton: CustomButton = {
-    let button = CustomButton(buttonTitle: "Medalhas", background: .brown, fontColor: .white)
+    let button = CustomButton(buttonTitle: L10n.medals, background: .brown, fontColor: .white)
     return button
   }()
   
   let emojiButton: CustomButton = {
-    let button = CustomButton(buttonTitle: "Emojômetro", background: .brown, fontColor: .white)
+    let button = CustomButton(buttonTitle: L10n.whoAreWe, background: .brown, fontColor: .white)
     return button
   }()
   

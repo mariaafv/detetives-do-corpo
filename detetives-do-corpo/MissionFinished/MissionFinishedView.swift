@@ -27,9 +27,9 @@ class MissionFinishedView: UIView {
     return titleLabel
   }()
   
-  private let descriptionLabel: UILabel = {
+  let descriptionLabel: UILabel = {
     let descriptionLabel = UILabel()
-    descriptionLabel.text = "Parabéns! Você e Lara conversaram com um adulto responsável e com isso ela está se sentindo mais segura.\n\n Você é um bom amigo e ganhou uma medalha!"
+    descriptionLabel.text = ""
     descriptionLabel.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
     descriptionLabel.numberOfLines = 0
     descriptionLabel.textAlignment = .center

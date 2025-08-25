@@ -22,20 +22,20 @@ final class MissionsScreenViewModel: MissionsScreenViewModelProtocol {
     } else {
       
       self.missions = [
-        Mission(title: "Missão 1: O segredo do armário",
-                description: "Disponível",
+        Mission(title: L10n.firstMissionTitle,
+                description: L10n.available,
                 imageName: "medal1-bw",
                 status: .unlocked),
-        Mission(title: "Missão 2: O toque da festa",
-                description: "Bloqueada",
+        Mission(title: L10n.secondMissionTitle,
+                description: L10n.blocked,
                 imageName: "medal2-bw",
                 status: .locked),
-        Mission(title: "Missão 3: O jogo da confusão",
-                description: "Bloqueada",
+        Mission(title: L10n.thirdMissionTitle,
+                description: L10n.blocked,
                 imageName: "medal3-bw",
                 status: .locked),
-        Mission(title: "Missão 4: A festa do primo",
-                description: "Bloqueada",
+        Mission(title: L10n.fourthMissionTitle,
+                description: L10n.blocked,
                 imageName: "medal4-bw",
                 status: .locked)
       ]
