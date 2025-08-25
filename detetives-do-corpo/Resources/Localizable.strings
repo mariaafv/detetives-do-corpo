@@ -6,8 +6,8 @@
 "available" = "Disponível";
 "firstMissionTitle" = "Missão 1: O segredo do armário";
 "secondMissionTitle" = "Missão 2: O toque da festa";
-"thirdMissionTitle" = "Missão 3: O jogo da confusão";
-"fourthMissionTitle" = "Missão 4: A festa do primo";
+"thirdMissionTitle" = "Missão 3: O que é um segredo?";
+"fourthMissionTitle" = "Missão 4: O corpo é meu!";
 
 // MISSION 1
 
@@ -46,3 +46,37 @@
 "2ndMissionThirdScreenThirdAnswerBaloon" = "A pessoa mais próxima que você encontra";
 
 "congratulationsYouSaidNo" = "Parabéns! Você soube como impor limites à um adulto inconveniente.\n\n Você é uma pessoa responsável e ganhou uma medalha!";
+
+
+// MARK: - MISSION 3
+
+"3rdMissionBaloonHistory" = "Você está no parque com seu amigo Pedro, ele está animado porque tem uma surpresa para te contar. Ele diz: 'Promete que é um segredo e que não vai contar pra ninguém? É a festa de aniversário surpresa da nossa amiga Julia!'. Que tipo de segredo é esse?";
+"3rdMissionFirstAnswerBaloon" = "É um segredo que não faz mal, mas mesmo assim é perigoso";
+"3rdMissionSecondAnswerBaloon" = "É um segredo ruim que te faz sentir mal";
+"3rdMissionThirdAnswerBaloon" = "É um segredo bom! É uma surpresa que vai fazer a Julia feliz";
+
+"3rdMissionSecondScreenBaloonHistory" = "Você e Pedro continuam brincando até que um outro colega se aproxima e pede para falar com você, e bem baixinho ele diz: 'O meu irmão mais velho me ensinou uma 'brincadeira' que não posso contar pra ninguém, é um segredo só nosso. Mas eu não gostei de fazer e agora estou com medo.'. Qual o melhor jeito de reagir a este segredo?";
+"3rdMissionSecondScreenFirstAnswerBaloon" = "Diz para ele não ficar com medo pois todos os segredos são divertidos";
+"3rdMissionSecondScreenSecondAnswerBaloon" = "Contar para Pedro sobre o segredo do colega";
+"3rdMissionSecondScreenThirdAnswerBaloon" = "Dizer que esse segredo não é um segredo bom e que vocês deveriam falar com um adulto de confiança";
+
+"3rdMissionThirdScreenBaloonHistory" = "Depois que vocês identificam que o segredo é ruim, seu amigo fica com medo de contar e o adulto não acreditar nele. Como você pode ajudar nesse caso?";
+"3rdMissionThirdScreenFirstAnswerBaloon" = "Oferecer-se para ir com ele e conversar com a professora ou com um adulto de confiança juntos";
+"3rdMissionThirdScreenSecondAnswerBaloon" = "Dizer que não pode ajudá-lo e ele tem que resolver sozinho";
+"3rdMissionThirdScreenThirdAnswerBaloon" = "Ir sozinho contar para a mãe dele sem avisá-lo";
+
+"congratulationsYouHelped" = "Parabéns! Você e seu colega conversaram com um adulto responsável e resolveram o problema.\n\n Você é um bom amigo e ganhou uma medalha!";
+
+// MARK: - MISSION 4
+
+"4thMissionBaloonHistory" = "Você está no vestiário depois de uma aula de natação. Um colega se aproxima e tenta puxar a sua toalha como parte de uma brincadeira. O que fazer quando alguém tenta invadir sua privacidade?";
+"4thMissionFirstAnswerBaloon" = "Deixa para lá, porque é só uma brincadeira";
+"4thMissionSecondAnswerBaloon" = "Segurar a toalha com força e dizer que ele não deve brincar com sua toalha";
+"4thMissionThirdAnswerBaloon" = "Finge que não aconteceu nada e continua a se trocar";
+
+"4thMissionSecondScreenBaloonHistory" = "Mais tarde vocês estão brincando novamente e o amigo faz duas perguntas que te deixam desconfortáveis, sobre a quantidade de pelos no seu peito e sobre suas partes intimas. Como você deve responder perguntas sobre suas partes privadas?";
+"4thMissionSecondScreenFirstAnswerBaloon" = "Ficar com vergonha e não responder, mas com um sorriso sem graça";
+"4thMissionSecondScreenSecondAnswerBaloon" = "Responder a pergunta e fazer uma parecida para o colega para se vingar";
+"4thMissionSecondScreenThirdAnswerBaloon" = "Dizer que você não gosta de falar sobre isso porque o corpo é apenas seu e ninguém deve saber sobre ele";
+
+"congratulationsYouUnderstoodYourBoundries" = "Parabéns! Você entende a diferença entre partes públicas e partes privadas.\n\n Você é inteligente e ganhou uma medalha!";

@@ -58,6 +58,46 @@ internal enum L10n {
   internal static let _2ndMissionThirdScreenSecondAnswerBaloon = L10n.tr("Localizable", "2ndMissionThirdScreenSecondAnswerBaloon", fallback: "Um amigo da mesma idade")
   /// A pessoa mais próxima que você encontra
   internal static let _2ndMissionThirdScreenThirdAnswerBaloon = L10n.tr("Localizable", "2ndMissionThirdScreenThirdAnswerBaloon", fallback: "A pessoa mais próxima que você encontra")
+  /// Você está no parque com seu amigo Pedro, ele está animado porque tem uma surpresa para te contar. Ele diz: 'Promete que é um segredo e que não vai contar pra ninguém? É a festa de aniversário surpresa da nossa amiga Julia!'. Que tipo de segredo é esse?
+  internal static let _3rdMissionBaloonHistory = L10n.tr("Localizable", "3rdMissionBaloonHistory", fallback: "Você está no parque com seu amigo Pedro, ele está animado porque tem uma surpresa para te contar. Ele diz: 'Promete que é um segredo e que não vai contar pra ninguém? É a festa de aniversário surpresa da nossa amiga Julia!'. Que tipo de segredo é esse?")
+  /// É um segredo que não faz mal, mas mesmo assim é perigoso
+  internal static let _3rdMissionFirstAnswerBaloon = L10n.tr("Localizable", "3rdMissionFirstAnswerBaloon", fallback: "É um segredo que não faz mal, mas mesmo assim é perigoso")
+  /// É um segredo ruim que te faz sentir mal
+  internal static let _3rdMissionSecondAnswerBaloon = L10n.tr("Localizable", "3rdMissionSecondAnswerBaloon", fallback: "É um segredo ruim que te faz sentir mal")
+  /// Você e Pedro continuam brincando até que um outro colega se aproxima e pede para falar com você, e bem baixinho ele diz: 'O meu irmão mais velho me ensinou uma 'brincadeira' que não posso contar pra ninguém, é um segredo só nosso. Mas eu não gostei de fazer e agora estou com medo.'. Qual o melhor jeito de reagir a este segredo?
+  internal static let _3rdMissionSecondScreenBaloonHistory = L10n.tr("Localizable", "3rdMissionSecondScreenBaloonHistory", fallback: "Você e Pedro continuam brincando até que um outro colega se aproxima e pede para falar com você, e bem baixinho ele diz: 'O meu irmão mais velho me ensinou uma 'brincadeira' que não posso contar pra ninguém, é um segredo só nosso. Mas eu não gostei de fazer e agora estou com medo.'. Qual o melhor jeito de reagir a este segredo?")
+  /// Diz para ele não ficar com medo pois todos os segredos são divertidos
+  internal static let _3rdMissionSecondScreenFirstAnswerBaloon = L10n.tr("Localizable", "3rdMissionSecondScreenFirstAnswerBaloon", fallback: "Diz para ele não ficar com medo pois todos os segredos são divertidos")
+  /// Contar para Pedro sobre o segredo do colega
+  internal static let _3rdMissionSecondScreenSecondAnswerBaloon = L10n.tr("Localizable", "3rdMissionSecondScreenSecondAnswerBaloon", fallback: "Contar para Pedro sobre o segredo do colega")
+  /// Dizer que esse segredo não é um segredo bom e que vocês deveriam falar com um adulto de confiança
+  internal static let _3rdMissionSecondScreenThirdAnswerBaloon = L10n.tr("Localizable", "3rdMissionSecondScreenThirdAnswerBaloon", fallback: "Dizer que esse segredo não é um segredo bom e que vocês deveriam falar com um adulto de confiança")
+  /// É um segredo bom! É uma surpresa que vai fazer a Julia feliz
+  internal static let _3rdMissionThirdAnswerBaloon = L10n.tr("Localizable", "3rdMissionThirdAnswerBaloon", fallback: "É um segredo bom! É uma surpresa que vai fazer a Julia feliz")
+  /// Depois que vocês identificam que o segredo é ruim, seu amigo fica com medo de contar e o adulto não acreditar nele. Como você pode ajudar nesse caso?
+  internal static let _3rdMissionThirdScreenBaloonHistory = L10n.tr("Localizable", "3rdMissionThirdScreenBaloonHistory", fallback: "Depois que vocês identificam que o segredo é ruim, seu amigo fica com medo de contar e o adulto não acreditar nele. Como você pode ajudar nesse caso?")
+  /// Oferecer-se para ir com ele e conversar com a professora ou com um adulto de confiança juntos
+  internal static let _3rdMissionThirdScreenFirstAnswerBaloon = L10n.tr("Localizable", "3rdMissionThirdScreenFirstAnswerBaloon", fallback: "Oferecer-se para ir com ele e conversar com a professora ou com um adulto de confiança juntos")
+  /// Dizer que não pode ajudá-lo e ele tem que resolver sozinho
+  internal static let _3rdMissionThirdScreenSecondAnswerBaloon = L10n.tr("Localizable", "3rdMissionThirdScreenSecondAnswerBaloon", fallback: "Dizer que não pode ajudá-lo e ele tem que resolver sozinho")
+  /// Ir sozinho contar para a mãe dele sem avisá-lo
+  internal static let _3rdMissionThirdScreenThirdAnswerBaloon = L10n.tr("Localizable", "3rdMissionThirdScreenThirdAnswerBaloon", fallback: "Ir sozinho contar para a mãe dele sem avisá-lo")
+  /// Você está no vestiário depois de uma aula de natação. Um colega se aproxima e tenta puxar a sua toalha como parte de uma brincadeira. O que fazer quando alguém tenta invadir sua privacidade?
+  internal static let _4thMissionBaloonHistory = L10n.tr("Localizable", "4thMissionBaloonHistory", fallback: "Você está no vestiário depois de uma aula de natação. Um colega se aproxima e tenta puxar a sua toalha como parte de uma brincadeira. O que fazer quando alguém tenta invadir sua privacidade?")
+  /// Deixa para lá, porque é só uma brincadeira
+  internal static let _4thMissionFirstAnswerBaloon = L10n.tr("Localizable", "4thMissionFirstAnswerBaloon", fallback: "Deixa para lá, porque é só uma brincadeira")
+  /// Segurar a toalha com força e dizer que ele não deve brincar com sua toalha
+  internal static let _4thMissionSecondAnswerBaloon = L10n.tr("Localizable", "4thMissionSecondAnswerBaloon", fallback: "Segurar a toalha com força e dizer que ele não deve brincar com sua toalha")
+  /// Mais tarde vocês estão brincando novamente e o amigo faz duas perguntas que te deixam desconfortáveis, sobre a quantidade de pelos no seu peito e sobre suas partes intimas. Como você deve responder perguntas sobre suas partes privadas?
+  internal static let _4thMissionSecondScreenBaloonHistory = L10n.tr("Localizable", "4thMissionSecondScreenBaloonHistory", fallback: "Mais tarde vocês estão brincando novamente e o amigo faz duas perguntas que te deixam desconfortáveis, sobre a quantidade de pelos no seu peito e sobre suas partes intimas. Como você deve responder perguntas sobre suas partes privadas?")
+  /// Ficar com vergonha e não responder, mas com um sorriso sem graça
+  internal static let _4thMissionSecondScreenFirstAnswerBaloon = L10n.tr("Localizable", "4thMissionSecondScreenFirstAnswerBaloon", fallback: "Ficar com vergonha e não responder, mas com um sorriso sem graça")
+  /// Responder a pergunta e fazer uma parecida para o colega para se vingar
+  internal static let _4thMissionSecondScreenSecondAnswerBaloon = L10n.tr("Localizable", "4thMissionSecondScreenSecondAnswerBaloon", fallback: "Responder a pergunta e fazer uma parecida para o colega para se vingar")
+  /// Dizer que você não gosta de falar sobre isso porque o corpo é apenas seu e ninguém deve saber sobre ele
+  internal static let _4thMissionSecondScreenThirdAnswerBaloon = L10n.tr("Localizable", "4thMissionSecondScreenThirdAnswerBaloon", fallback: "Dizer que você não gosta de falar sobre isso porque o corpo é apenas seu e ninguém deve saber sobre ele")
+  /// Finge que não aconteceu nada e continua a se trocar
+  internal static let _4thMissionThirdAnswerBaloon = L10n.tr("Localizable", "4thMissionThirdAnswerBaloon", fallback: "Finge que não aconteceu nada e continua a se trocar")
   /// Disponível
   internal static let available = L10n.tr("Localizable", "available", fallback: "Disponível")
   /// Bloqueada
@@ -66,22 +106,30 @@ internal enum L10n {
   /// 
   ///  Você é um bom amigo e ganhou uma medalha!
   internal static let congratulationsYouAndLara = L10n.tr("Localizable", "congratulationsYouAndLara", fallback: "Parabéns! Você e Lara conversaram com um adulto responsável e com isso ela está se sentindo mais segura.\n\n Você é um bom amigo e ganhou uma medalha!")
+  /// Parabéns! Você e seu colega conversaram com um adulto responsável e resolveram o problema.
+  /// 
+  ///  Você é um bom amigo e ganhou uma medalha!
+  internal static let congratulationsYouHelped = L10n.tr("Localizable", "congratulationsYouHelped", fallback: "Parabéns! Você e seu colega conversaram com um adulto responsável e resolveram o problema.\n\n Você é um bom amigo e ganhou uma medalha!")
   /// Parabéns! Você soube como impor limites à um adulto inconveniente.
   /// 
   ///  Você é uma pessoa responsável e ganhou uma medalha!
   internal static let congratulationsYouSaidNo = L10n.tr("Localizable", "congratulationsYouSaidNo", fallback: "Parabéns! Você soube como impor limites à um adulto inconveniente.\n\n Você é uma pessoa responsável e ganhou uma medalha!")
+  /// Parabéns! Você entende a diferença entre partes públicas e partes privadas.
+  /// 
+  ///  Você é inteligente e ganhou uma medalha!
+  internal static let congratulationsYouUnderstoodYourBoundries = L10n.tr("Localizable", "congratulationsYouUnderstoodYourBoundries", fallback: "Parabéns! Você entende a diferença entre partes públicas e partes privadas.\n\n Você é inteligente e ganhou uma medalha!")
   /// Missão 1: O segredo do armário
   internal static let firstMissionTitle = L10n.tr("Localizable", "firstMissionTitle", fallback: "Missão 1: O segredo do armário")
-  /// Missão 4: A festa do primo
-  internal static let fourthMissionTitle = L10n.tr("Localizable", "fourthMissionTitle", fallback: "Missão 4: A festa do primo")
+  /// Missão 4: O corpo é meu!
+  internal static let fourthMissionTitle = L10n.tr("Localizable", "fourthMissionTitle", fallback: "Missão 4: O corpo é meu!")
   /// Medalhas
   internal static let medals = L10n.tr("Localizable", "medals", fallback: "Medalhas")
   /// Mapa de missões
   internal static let missionsMap = L10n.tr("Localizable", "missionsMap", fallback: "Mapa de missões")
   /// Missão 2: O toque da festa
   internal static let secondMissionTitle = L10n.tr("Localizable", "secondMissionTitle", fallback: "Missão 2: O toque da festa")
-  /// Missão 3: O jogo da confusão
-  internal static let thirdMissionTitle = L10n.tr("Localizable", "thirdMissionTitle", fallback: "Missão 3: O jogo da confusão")
+  /// Missão 3: O que é um segredo?
+  internal static let thirdMissionTitle = L10n.tr("Localizable", "thirdMissionTitle", fallback: "Missão 3: O que é um segredo?")
   /// Seja bem-vindo, detetive!
   internal static let welcomedetective = L10n.tr("Localizable", "welcomedetective", fallback: "Seja bem-vindo, detetive!")
   /// Quem somos?

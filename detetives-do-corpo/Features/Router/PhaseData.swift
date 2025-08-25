@@ -63,5 +63,48 @@ struct MissionPhase {
                             L10n._2ndMissionThirdScreenThirdAnswerBaloon],
                   correctAnwserIndex: 0)],
       conquestImageName: "medal2",
-      medalDescription: L10n.congratulationsYouSaidNo)]
+      medalDescription: L10n.congratulationsYouSaidNo),
+  
+    MissionsPhases(
+      phases: [
+        PhaseData(
+          imageName: "tio1",
+          history: L10n._3rdMissionBaloonHistory,
+          answers: [L10n._3rdMissionFirstAnswerBaloon,
+                    L10n._3rdMissionSecondAnswerBaloon,
+                    L10n._3rdMissionThirdAnswerBaloon],
+          correctAnwserIndex: 2),
+        PhaseData(imageName: "tio2",
+                  history: L10n._3rdMissionSecondScreenBaloonHistory,
+                  answers: [L10n._3rdMissionSecondScreenFirstAnswerBaloon,
+                            L10n._3rdMissionSecondScreenSecondAnswerBaloon,
+                            L10n._3rdMissionSecondScreenThirdAnswerBaloon],
+                  correctAnwserIndex: 2),
+        PhaseData(imageName: "tio3",
+                  history: L10n._3rdMissionThirdScreenBaloonHistory,
+                  answers: [L10n._3rdMissionThirdScreenFirstAnswerBaloon,
+                            L10n._3rdMissionThirdScreenSecondAnswerBaloon,
+                            L10n._3rdMissionThirdScreenThirdAnswerBaloon],
+                  correctAnwserIndex: 0)],
+      conquestImageName: "medal3",
+      medalDescription: L10n.congratulationsYouHelped),
+    
+    MissionsPhases(
+      phases: [
+        PhaseData(
+          imageName: "tio1",
+          history: L10n._4thMissionBaloonHistory,
+          answers: [L10n._4thMissionFirstAnswerBaloon,
+                    L10n._4thMissionSecondAnswerBaloon,
+                    L10n._4thMissionThirdAnswerBaloon],
+          correctAnwserIndex: 2),
+        PhaseData(imageName: "tio2",
+                  history: L10n._4thMissionSecondScreenBaloonHistory,
+                  answers: [L10n._4thMissionSecondScreenFirstAnswerBaloon,
+                            L10n._4thMissionSecondScreenSecondAnswerBaloon,
+                            L10n._4thMissionSecondScreenThirdAnswerBaloon],
+                  correctAnwserIndex: 2)],
+      conquestImageName: "medal3",
+      medalDescription: L10n.congratulationsYouUnderstoodYourBoundries),
+  ]
 }
