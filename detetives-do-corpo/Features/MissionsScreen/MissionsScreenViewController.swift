@@ -61,11 +61,6 @@ extension MissionsScreenViewController: UICollectionViewDataSource, UICollection
     }
     
     viewModel.getNavigationAction(for: indexPath.item)?()
-    
-//    let mission = viewModel.missions[indexPath.item]
-//    router.showMissionFinishedBottomSheet(image: mission.imageName,
-//                                          missionIndex: indexPath.item,
-//                                          missionsViewModel: viewModel)
   }
   
   func collectionView(_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

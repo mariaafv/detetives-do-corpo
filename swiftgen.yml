@@ -1,0 +1,5 @@
+strings:
+  inputs: detetives-do-corpo/Resources/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      output: detetives-do-corpo/Generated/Strings.swift

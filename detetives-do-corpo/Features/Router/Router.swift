@@ -24,6 +24,12 @@ final class Router {
 }
 
 extension Router: InitialScreenNavigationDelegate {
+  func didTapMedalsButton() {
+    let viewModel = MedalsViewModel()
+    let viewController = MedalsViewController(viewModel: viewModel)
+    navigationController.pushViewController(viewController, animated: true)
+  }
+  
   func didTapMissionsButton() {
     let viewModel = MissionsScreenViewModel(router: self)
     let viewController = MissionsScreenViewController(viewModel: viewModel, router: self)
@@ -39,7 +45,9 @@ extension Router: MissionsRouterProtocol {
   }
   
   func navigateToSecondMission() {
-    // implementar
+    let viewModel = SecondMissionFirstScreenViewModel(navigationDelegate: self)
+    let viewController = SecondMissionFirstScreenViewController(viewModel: viewModel)
+    navigationController.pushViewController(viewController, animated: true)
   }
   
   func navigateToThirdMission() {
@@ -72,6 +80,20 @@ extension Router: FirstMissionThirdScreenNavigationDelegate {
     if let missionsViewController = navigationController.viewControllers.first(where: { $0 is MissionsScreenViewController }) as? MissionsScreenViewController {
       showMissionFinishedBottomSheet(image: "medal1", missionIndex: 0, missionsViewModel: missionsViewController.viewModel)
     }
+  }
+}
+
+extension Router: SecondMissionFirstScreenNavigationDelegate {
+  func nextScreen() {
+    let viewModel = SecondMissionSecondScreenViewModel(navigationDelegate: self)
+    let viewController = SecondMissionSecondScreenViewController(viewModel: viewModel)
+    navigationController.pushViewController(viewController, animated: true)
+  }
+}
+
+extension Router: SecondMissionSecondScreenNavigationDelegate {
+  func goToSecondMissionThirdScreen() {
+    //code
   }
 }
 

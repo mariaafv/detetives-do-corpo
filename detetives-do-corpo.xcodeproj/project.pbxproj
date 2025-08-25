@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4C2B65BC2E5CC08B0097F5F5 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4C2B65BB2E5CC08B0097F5F5 /* swiftgen.yml */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		4CDC3F392E576768000D8311 /* detetives-do-corpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "detetives-do-corpo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C2B65BB2E5CC08B0097F5F5 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		4C34D29C2E5C9E1C003C5DAB /* detetives-do-corpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "detetives-do-corpo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -15,16 +20,28 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
+				Resources/Localizable.strings,
 			);
 			target = 4CDC3EE72E54B4B1000D8311 /* detetives-do-corpo */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		4C7F3D372E5CB14400A409CB /* Exceptions for "detetives-do-corpo" folder in "Compile Sources" phase from "detetives-do-corpo" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 4CDC3EE42E54B4B1000D8311 /* Sources */;
+			membershipExceptions = (
+				Resources/Localizable.strings,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4CDC3EEA2E54B4B1000D8311 /* detetives-do-corpo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				4CDC3EFA2E54B4B3000D8311 /* Exceptions for "detetives-do-corpo" folder in "detetives-do-corpo" target */,
+				4C7F3D372E5CB14400A409CB /* Exceptions for "detetives-do-corpo" folder in "Compile Sources" phase from "detetives-do-corpo" target */,
 			);
 			path = "detetives-do-corpo";
 			sourceTree = "<group>";
@@ -46,7 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				4CDC3EEA2E54B4B1000D8311 /* detetives-do-corpo */,
-				4CDC3F392E576768000D8311 /* detetives-do-corpo.app */,
+				4C34D29C2E5C9E1C003C5DAB /* detetives-do-corpo.app */,
+				4C2B65BB2E5CC08B0097F5F5 /* swiftgen.yml */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +78,7 @@
 				4CDC3EE42E54B4B1000D8311 /* Sources */,
 				4CDC3EE52E54B4B1000D8311 /* Frameworks */,
 				4CDC3EE62E54B4B1000D8311 /* Resources */,
+				4C7F3D412E5CBCAA00A409CB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -72,7 +91,7 @@
 			packageProductDependencies = (
 			);
 			productName = "detetives-do-corpo";
-			productReference = 4CDC3F392E576768000D8311 /* detetives-do-corpo.app */;
+			productReference = 4C34D29C2E5C9E1C003C5DAB /* detetives-do-corpo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,6 +118,8 @@
 			);
 			mainGroup = 4CDC3EDF2E54B4B1000D8311;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4CDC3EDF2E54B4B1000D8311;
 			projectDirPath = "";
@@ -114,10 +135,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2B65BC2E5CC08B0097F5F5 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C7F3D412E5CBCAA00A409CB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen > /dev/null; then\n  swiftgen\nelse\n  echo \"warning: SwiftGen não está disponível via SPM. Verifique se o produto 'swiftgen' (executável) foi adicionado ao target.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4CDC3EE42E54B4B1000D8311 /* Sources */ = {
@@ -223,7 +265,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -286,7 +328,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

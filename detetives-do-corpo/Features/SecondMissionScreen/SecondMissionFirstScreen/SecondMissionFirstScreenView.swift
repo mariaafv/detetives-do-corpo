@@ -1,6 +1,6 @@
 import UIKit
 
-class FirstMissionScreenView: UIView {
+class SecondMissionFirstScreenView: UIView {
 
   private let logoImageView: UIImageView = {
     let imageView = UIImageView(image: UIImage(named: "logo-2"))
@@ -10,19 +10,19 @@ class FirstMissionScreenView: UIView {
   }()
   
   private let laraImageView: UIImageView = {
-    let imageView = UIImageView(image: UIImage(named: "lara1"))
+    let imageView = UIImageView(image: UIImage(named: "tio1"))
     imageView.contentMode = .scaleAspectFit
     imageView.translatesAutoresizingMaskIntoConstraints = false
     return imageView
   }()
   
-  let historyBallon = CustomButton(buttonTitle: "Lara está muito mudada e quieta após uma festa de aniversário do primo, não quer mais brincar e não conversa com ninguém, o que você faz?", background: .backgroundBaloon, fontColor: .black, alignLeft: true, isInteractionEnable: false)
+  let historyBallon = CustomButton(buttonTitle: "Você está em uma festa animada, onde todos seus amigos estão brincando, durante a brincadeira, seu tio aparece e tenta te dar um beijo e um abraço, mas você fica desconfortável. O que você faz?", background: .backgroundBaloon, fontColor: .black, alignLeft: true, isInteractionEnable: false)
   
-  let firstAnswerBallon = CustomButton(buttonTitle: L10n.teste, background: .white, fontColor: .black, alignLeft: true)
+  let firstAnswerBallon = CustomButton(buttonTitle: "Você sai correndo e continua brincando com seus amigos", background: .white, fontColor: .black, alignLeft: true)
   
-  let secondAnswerBallon = CustomButton(buttonTitle: "Conversa com ela para tentar entender o que está acontecendo", background: .white, fontColor: .black, alignLeft: true)
+  let secondAnswerBallon = CustomButton(buttonTitle: "Finge que está confortável para não ser mal educado", background: .white, fontColor: .black, alignLeft: true)
 
-  let thirdAnswerBallon = CustomButton(buttonTitle: "Conta para os outros amigos para ver se alguém sabe o que aconteceu", background: .white, fontColor: .black, alignLeft: true)
+  let thirdAnswerBallon = CustomButton(buttonTitle: "Você diz que não quer um beijo no momento e agradece o tio", background: .white, fontColor: .black, alignLeft: true)
   
   override init(frame: CGRect) {
     super.init(frame: frame)

@@ -26,9 +26,14 @@ class InitialScreenViewController: UIViewController {
   
   func setupActions() {
     baseView.missionsButton.addTarget(self, action: #selector(missionsButtonTapped), for: .touchUpInside)
+    baseView.medalsButton.addTarget(self, action: #selector(medalsButtonTapped), for: UIControl.Event.touchUpInside)
   }
   
   @objc func missionsButtonTapped() {
     viewModel.didTapMissionsButton()
+  }
+  
+  @objc func medalsButtonTapped() {
+    viewModel.didTapMedalsButton()
   }
 }

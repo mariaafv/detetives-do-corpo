@@ -1,6 +1,6 @@
 import UIKit
 
-class FirstMissionScreenView: UIView {
+class SecondMissionSecondScreenView: UIView {
 
   private let logoImageView: UIImageView = {
     let imageView = UIImageView(image: UIImage(named: "logo-2"))
@@ -10,19 +10,19 @@ class FirstMissionScreenView: UIView {
   }()
   
   private let laraImageView: UIImageView = {
-    let imageView = UIImageView(image: UIImage(named: "lara1"))
+    let imageView = UIImageView(image: UIImage(named: "lara"))
     imageView.contentMode = .scaleAspectFit
     imageView.translatesAutoresizingMaskIntoConstraints = false
     return imageView
   }()
   
-  let historyBallon = CustomButton(buttonTitle: "Lara está muito mudada e quieta após uma festa de aniversário do primo, não quer mais brincar e não conversa com ninguém, o que você faz?", background: .backgroundBaloon, fontColor: .black, alignLeft: true, isInteractionEnable: false)
+  let historyBallon = CustomButton(buttonTitle: "Mesmo você dizendo que não quer um beijo, seu tio volta a se aproximar e tenta te abraçar. O que você faz?", background: .backgroundBaloon, fontColor: .black, alignLeft: true, isInteractionEnable: false)
   
-  let firstAnswerBallon = CustomButton(buttonTitle: L10n.teste, background: .white, fontColor: .black, alignLeft: true)
+  let firstAnswerBallon = CustomButton(buttonTitle: "Ficar parado e não fazer nada", background: .white, fontColor: .black, alignLeft: true)
   
-  let secondAnswerBallon = CustomButton(buttonTitle: "Conversa com ela para tentar entender o que está acontecendo", background: .white, fontColor: .black, alignLeft: true)
+  let secondAnswerBallon = CustomButton(buttonTitle: "Sai de perto e procura um adulto de confiança", background: .white, fontColor: .black, alignLeft: true)
 
-  let thirdAnswerBallon = CustomButton(buttonTitle: "Conta para os outros amigos para ver se alguém sabe o que aconteceu", background: .white, fontColor: .black, alignLeft: true)
+  let thirdAnswerBallon = CustomButton(buttonTitle: "Finge que está tudo bem e da risada", background: .white, fontColor: .black, alignLeft: true)
   
   override init(frame: CGRect) {
     super.init(frame: frame)

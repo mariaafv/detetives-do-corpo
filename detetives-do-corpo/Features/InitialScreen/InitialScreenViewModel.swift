@@ -2,10 +2,12 @@ import Foundation
 
 protocol InitialScreenViewModelProtocol: AnyObject {
   func didTapMissionsButton()
+  func didTapMedalsButton()
 }
 
 protocol InitialScreenNavigationDelegate: AnyObject {
   func didTapMissionsButton()
+  func didTapMedalsButton()
 }
 
 class InitialScreenViewModel {
@@ -19,5 +21,9 @@ class InitialScreenViewModel {
 extension InitialScreenViewModel: InitialScreenViewModelProtocol {
   func didTapMissionsButton() {
     navigationDelegate?.didTapMissionsButton()
+  }
+  
+  func didTapMedalsButton() {
+    navigationDelegate?.didTapMedalsButton()
   }
 }
