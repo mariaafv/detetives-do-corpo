@@ -56,7 +56,11 @@ final class Router {
 }
 
 extension Router: InitialScreenNavigationDelegate {
-  func didTapMedalsButton() { /* ... */ }
+  func didTapMedalsButton() {
+    let viewModel = MedalsViewModel()
+    let viewController = MedalsViewController(viewModel: viewModel)
+    navigationController.pushViewController(viewController, animated: true)
+  }
   
   func didTapMissionsButton() {
     let viewModel = MissionsScreenViewModel(router: self)
