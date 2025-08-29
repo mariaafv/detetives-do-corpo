@@ -21,7 +21,7 @@ final class Router {
   private weak var missionsViewModel: MissionsScreenViewModelProtocol?
   
   init() {
-    self.navigationController = UINavigationController()
+    self.navigationController = CustomNavigationController()
   }
   
   func start() {
