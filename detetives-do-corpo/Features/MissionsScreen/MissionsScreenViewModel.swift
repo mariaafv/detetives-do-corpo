@@ -9,18 +9,26 @@ protocol MissionsScreenViewModelProtocol: AnyObject {
 }
 
 final class MissionsScreenViewModel: MissionsScreenViewModelProtocol {
-  var missions: [Mission] = []
   
+  // MARK: - Public
+  private(set) var missions: [Mission] = []
+  
+  // MARK: - Dependencies
   private var router: MissionsRouterProtocol?
-  private let storage = MissionsStorage()
+  private let storage: MissionsStorage
   
-  init(router: MissionsRouterProtocol?) {
+  // MARK: - Init
+  init(router: MissionsRouterProtocol?, storage: MissionsStorage = MissionsStorage()) {
     self.router = router
-    
-    if let saved = storage.loadMissions() {
-      self.missions = saved
-    } else {
-      
+    self.storage = storage
+    bootstrapIfNeeded()
+  }
+  
+  // MARK: - Bootstrap (carrega do storage ou cria default e persiste)
+  private func bootstrapIfNeeded() {
+    let loaded = storage.load()
+    if loaded.isEmpty {
+      // estado inicial
       self.missions = [
         Mission(title: L10n.firstMissionTitle,
                 description: L10n.available,
@@ -39,32 +47,41 @@ final class MissionsScreenViewModel: MissionsScreenViewModelProtocol {
                 imageName: "medal4-bw",
                 status: .locked)
       ]
-      storage.saveMissions(missions)
+      storage.save(missions)
+    } else {
+      self.missions = loaded
     }
   }
   
+  // MARK: - Progress / Update
   func markMissionsCompleted(at index: Int) {
-      guard index < missions.count else { return }
-      
-      missions[index].status = .completed
-      missions[index].description = "Completa"
-      
-      let completedImageNames = ["medal1", "medal2", "medal3", "medal4"]
-      if index < completedImageNames.count {
-          missions[index].imageName = completedImageNames[index]
-      }
-      
-      if index + 1 < missions.count {
-          missions[index + 1].status = .unlocked
-          missions[index + 1].description = "Disponível"
-      }
-      
-      storage.saveMissions(missions)
+    guard missions.indices.contains(index) else { return }
+    
+    var updated = storage.load()
+    if updated.isEmpty { updated = missions }
+    
+    updated[index].status = .completed
+    updated[index].description = "Completa"
+    
+    let completedImageNames = ["medal1", "medal2", "medal3", "medal4"]
+    if index < completedImageNames.count {
+      updated[index].imageName = completedImageNames[index]
+    }
+    
+    if updated.indices.contains(index + 1) {
+      updated[index + 1].status = .unlocked
+      updated[index + 1].description = L10n.available
+    }
+    
+    storage.save(updated)
+    self.missions = updated
+    
+    NotificationCenter.default.post(name: .missionsUpdated, object: nil)
   }
-
   
+  // MARK: - Navigation rules
   func canNavigateToMission(at index: Int) -> Bool {
-    guard index < missions.count else { return false }
+    guard missions.indices.contains(index) else { return false }
     return missions[index].status == .unlocked || missions[index].status == .completed
   }
   

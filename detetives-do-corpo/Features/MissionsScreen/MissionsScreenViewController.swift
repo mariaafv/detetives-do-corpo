@@ -27,7 +27,7 @@ final class MissionsScreenViewController: UIViewController {
     super.viewDidLoad()
     configureCollectionView()
     
-    NotificationCenter.default.addObserver(self,selector: #selector(reloadMissions),name: .missionsUpdated,object: nil)
+    NotificationCenter.default.addObserver(self,selector: #selector(reloadMissions),name: .missionsUpdated, object: nil)
   }
   
   @objc private func reloadMissions() {
