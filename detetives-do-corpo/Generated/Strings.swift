@@ -28,8 +28,8 @@ internal enum L10n {
   internal static let _1stMissionThirdAnswerBaloon = L10n.tr("Localizable", "1stMissionThirdAnswerBaloon", fallback: "Conta para os outros amigos para ver se alguém sabe o que aconteceu")
   /// Juntos, vocês procuram um adulto de confiança para contar o que aconteceu
   internal static let _1stMissionThirdScreenFirstAnswerBaloon = L10n.tr("Localizable", "1stMissionThirdScreenFirstAnswerBaloon", fallback: "Juntos, vocês procuram um adulto de confiança para contar o que aconteceu")
-  /// Lara finalmente confessa o que aconteceu, o amigo do primo a tocou de forma inprópria e ela ficou muito assustada. O que você faz?
-  internal static let _1stMissionThirdScreenFirstBaloonHistory = L10n.tr("Localizable", "1stMissionThirdScreenFirstBaloonHistory", fallback: "Lara finalmente confessa o que aconteceu, o amigo do primo a tocou de forma inprópria e ela ficou muito assustada. O que você faz?")
+  /// Lara finalmente confessa o que aconteceu, o amigo do primo a tocou de forma imprópria e ela ficou muito assustada. O que você faz?
+  internal static let _1stMissionThirdScreenFirstBaloonHistory = L10n.tr("Localizable", "1stMissionThirdScreenFirstBaloonHistory", fallback: "Lara finalmente confessa o que aconteceu, o amigo do primo a tocou de forma imprópria e ela ficou muito assustada. O que você faz?")
   /// Ir brigar com a pessoa que fez isso
   internal static let _1stMissionThirdScreenSecondAnswerBaloon = L10n.tr("Localizable", "1stMissionThirdScreenSecondAnswerBaloon", fallback: "Ir brigar com a pessoa que fez isso")
   /// Prometer à Lara que não vai contar para ninguém

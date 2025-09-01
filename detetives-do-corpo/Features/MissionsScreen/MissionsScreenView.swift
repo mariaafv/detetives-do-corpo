@@ -3,7 +3,6 @@ import UIKit
 final class MissionsScreenView: UIView {
   let collectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
-    //layout.scrollDirection = .horizontal
     layout.itemSize = CGSize(width: UIScreen.main.bounds.width - 32, height: 160)
     layout.minimumInteritemSpacing = 8
     layout.minimumLineSpacing = 16

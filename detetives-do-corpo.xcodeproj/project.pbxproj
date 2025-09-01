@@ -19,8 +19,8 @@
 		4CDC3EFA2E54B4B3000D8311 /* Exceptions for "detetives-do-corpo" folder in "detetives-do-corpo" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"/Localized: Resources/Localizable.strings",
 				Info.plist,
-				Resources/Localizable.strings,
 			);
 			target = 4CDC3EE72E54B4B1000D8311 /* detetives-do-corpo */;
 		};
@@ -31,7 +31,7 @@
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = 4CDC3EE42E54B4B1000D8311 /* Sources */;
 			membershipExceptions = (
-				Resources/Localizable.strings,
+				"/Localized: Resources/Localizable.strings",
 			);
 		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
@@ -110,11 +110,12 @@
 				};
 			};
 			buildConfigurationList = 4CDC3EE32E54B4B1000D8311 /* Build configuration list for PBXProject "detetives-do-corpo" */;
-			developmentRegion = en;
+			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 4CDC3EDF2E54B4B1000D8311;
 			minimizedProjectReferenceProxies = 1;
@@ -233,6 +234,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -296,6 +298,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

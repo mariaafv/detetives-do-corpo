@@ -9,13 +9,13 @@ class MedalCell: UICollectionViewCell {
     imageView.contentMode = .scaleAspectFit
     imageView.translatesAutoresizingMaskIntoConstraints = false
     imageView.backgroundColor = .white
-    imageView.layer.cornerRadius = 6
+    imageView.layer.cornerRadius = 10
     return imageView
   }()
   
   private let lockImageView: UIImageView = {
     let imageView = UIImageView(image: UIImage(systemName: "lock.fill"))
-    imageView.tintColor = .brown
+    imageView.tintColor = .yellow
     imageView.contentMode = .scaleAspectFit
     imageView.translatesAutoresizingMaskIntoConstraints = false
     imageView.isHidden = true

@@ -40,7 +40,7 @@ struct MissionPhase {
       conquestImageName: "medal1",
       medalDescription: L10n.congratulationsYouAndLara),
     
-    // MARK: - Missão 2
+    // MARK: - Mission 2
     MissionsPhases(
       phases: [
         PhaseData(
@@ -65,22 +65,24 @@ struct MissionPhase {
       conquestImageName: "medal2",
       medalDescription: L10n.congratulationsYouSaidNo),
   
+    // MARK: - Mission 3
+    
     MissionsPhases(
       phases: [
         PhaseData(
-          imageName: "tio1",
+          imageName: "aniversario1",
           history: L10n._3rdMissionBaloonHistory,
           answers: [L10n._3rdMissionFirstAnswerBaloon,
                     L10n._3rdMissionSecondAnswerBaloon,
                     L10n._3rdMissionThirdAnswerBaloon],
           correctAnwserIndex: 2),
-        PhaseData(imageName: "tio2",
+        PhaseData(imageName: "aniversario2",
                   history: L10n._3rdMissionSecondScreenBaloonHistory,
                   answers: [L10n._3rdMissionSecondScreenFirstAnswerBaloon,
                             L10n._3rdMissionSecondScreenSecondAnswerBaloon,
                             L10n._3rdMissionSecondScreenThirdAnswerBaloon],
                   correctAnwserIndex: 2),
-        PhaseData(imageName: "tio3",
+        PhaseData(imageName: "aniversario3",
                   history: L10n._3rdMissionThirdScreenBaloonHistory,
                   answers: [L10n._3rdMissionThirdScreenFirstAnswerBaloon,
                             L10n._3rdMissionThirdScreenSecondAnswerBaloon,
@@ -89,22 +91,24 @@ struct MissionPhase {
       conquestImageName: "medal3",
       medalDescription: L10n.congratulationsYouHelped),
     
+    // MARK: - Mission 4
+    
     MissionsPhases(
       phases: [
         PhaseData(
-          imageName: "tio1",
+          imageName: "banheiro1",
           history: L10n._4thMissionBaloonHistory,
           answers: [L10n._4thMissionFirstAnswerBaloon,
                     L10n._4thMissionSecondAnswerBaloon,
                     L10n._4thMissionThirdAnswerBaloon],
           correctAnwserIndex: 2),
-        PhaseData(imageName: "tio2",
+        PhaseData(imageName: "banheiro2",
                   history: L10n._4thMissionSecondScreenBaloonHistory,
                   answers: [L10n._4thMissionSecondScreenFirstAnswerBaloon,
                             L10n._4thMissionSecondScreenSecondAnswerBaloon,
                             L10n._4thMissionSecondScreenThirdAnswerBaloon],
                   correctAnwserIndex: 2)],
-      conquestImageName: "medal3",
+      conquestImageName: "banheiro3",
       medalDescription: L10n.congratulationsYouUnderstoodYourBoundries),
   ]
 }
