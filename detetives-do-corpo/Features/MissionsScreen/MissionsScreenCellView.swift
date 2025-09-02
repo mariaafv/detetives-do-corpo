@@ -53,6 +53,7 @@ final class MissionCell: UICollectionViewCell {
     imageView.translatesAutoresizingMaskIntoConstraints = false
     
     titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
+    titleLabel.numberOfLines = 0
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
     
     descriptionLabel.font = UIFont.systemFont(ofSize: 16)
@@ -77,6 +78,7 @@ final class MissionCell: UICollectionViewCell {
       
       titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 54),
       titleLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 8),
+      titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
       
       descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
       descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
