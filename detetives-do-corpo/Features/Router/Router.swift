@@ -68,6 +68,12 @@ extension Router: InitialScreenNavigationDelegate {
     let viewController = MissionsScreenViewController(viewModel: viewModel, router: self)
     navigationController.pushViewController(viewController, animated: true)
   }
+  
+  func didTapAskForHelpButton() {
+    let viewModel = AskForHelpViewModel(navigationDelegate: self)
+    let viewController = AskForHelpViewController(viewModel: viewModel)
+    navigationController.pushViewController(viewController, animated: true)
+  }
 }
 
 extension Router: MissionsRouterProtocol {
@@ -107,6 +113,10 @@ extension Router: MissionFinishedNavigationDelegate {
       }
     }
   }
+}
+
+extension Router: AskForHelpNavigationDelegate {
+  //code
 }
 
 extension Router {

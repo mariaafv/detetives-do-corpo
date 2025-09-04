@@ -100,6 +100,8 @@ internal enum L10n {
   internal static let _4thMissionThirdAnswerBaloon = L10n.tr("Localizable", "4thMissionThirdAnswerBaloon", fallback: "Finge que não aconteceu nada e continua a se trocar")
   /// Disponível
   internal static let available = L10n.tr("Localizable", "available", fallback: "Disponível")
+  /// Voltar
+  internal static let back = L10n.tr("Localizable", "back", fallback: "Voltar")
   /// Bloqueada
   internal static let blocked = L10n.tr("Localizable", "blocked", fallback: "Bloqueada")
   /// Parabéns! Você e Lara conversaram com um adulto responsável e com isso ela está se sentindo mais segura.
@@ -122,18 +124,20 @@ internal enum L10n {
   internal static let firstMissionTitle = L10n.tr("Localizable", "firstMissionTitle", fallback: "Missão 1: O segredo do armário")
   /// Missão 4: O corpo é meu!
   internal static let fourthMissionTitle = L10n.tr("Localizable", "fourthMissionTitle", fallback: "Missão 4: O corpo é meu!")
+  /// Peça ajuda
+  internal static let help = L10n.tr("Localizable", "help", fallback: "Peça ajuda")
   /// Medalhas
   internal static let medals = L10n.tr("Localizable", "medals", fallback: "Medalhas")
+  /// Missão concluída!
+  internal static let missionFinished = L10n.tr("Localizable", "missionFinished", fallback: "Missão concluída!")
   /// Mapa de missões
   internal static let missionsMap = L10n.tr("Localizable", "missionsMap", fallback: "Mapa de missões")
   /// Missão 2: O toque da festa
   internal static let secondMissionTitle = L10n.tr("Localizable", "secondMissionTitle", fallback: "Missão 2: O toque da festa")
   /// Missão 3: O que é um segredo?
   internal static let thirdMissionTitle = L10n.tr("Localizable", "thirdMissionTitle", fallback: "Missão 3: O que é um segredo?")
-  /// Seja bem-vindo, detetive!
-  internal static let welcomedetective = L10n.tr("Localizable", "welcomedetective", fallback: "Seja bem-vindo, detetive!")
-  /// Quem somos?
-  internal static let whoAreWe = L10n.tr("Localizable", "whoAreWe", fallback: "Quem somos?")
+  /// Olá, detetive!
+  internal static let welcomedetective = L10n.tr("Localizable", "welcomedetective", fallback: "Olá, detetive!")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

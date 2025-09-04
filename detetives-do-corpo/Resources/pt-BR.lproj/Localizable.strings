@@ -1,13 +1,15 @@
-"welcomedetective" = "Seja bem-vindo, detetive!";
+"welcomedetective" = "Olá, detetive!";
 "missionsMap" = "Mapa de missões";
 "medals" = "Medalhas";
-"whoAreWe" = "Quem somos?";
+"help" = "Peça ajuda";
 "blocked" = "Bloqueada";
 "available" = "Disponível";
 "firstMissionTitle" = "Missão 1: O segredo do armário";
 "secondMissionTitle" = "Missão 2: O toque da festa";
 "thirdMissionTitle" = "Missão 3: O que é um segredo?";
 "fourthMissionTitle" = "Missão 4: O corpo é meu!";
+"missionFinished" = "Missão concluída!";
+"back"= "Voltar";
 
 // MISSION 1
 

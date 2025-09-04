@@ -19,7 +19,7 @@ class MissionFinishedView: UIView {
   
   private let titleLabel: UILabel = {
     let titleLabel = UILabel()
-    titleLabel.text = "Missão concluída!"
+    titleLabel.text = L10n.missionFinished
     titleLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
     titleLabel.textColor = .white
     titleLabel.textAlignment = .center
@@ -37,7 +37,7 @@ class MissionFinishedView: UIView {
     return descriptionLabel
   }()
   
-  let returnButton = CustomButton(buttonTitle: "Voltar", background: .yellowButton, fontColor: .black)
+  let returnButton = CustomButton(buttonTitle: L10n.back, background: .yellowButton, fontColor: .black)
   
   override init(frame: CGRect) {
     super.init(frame: frame)

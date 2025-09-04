@@ -38,8 +38,8 @@ class InitialScreenView: UIView {
     return button
   }()
   
-  let emojiButton: CustomButton = {
-    let button = CustomButton(buttonTitle: L10n.whoAreWe, background: .yellowButton, fontColor: .black)
+  let askForHelpButton: CustomButton = {
+    let button = CustomButton(buttonTitle: L10n.help, background: .yellowButton, fontColor: .black)
     return button
   }()
   
@@ -59,7 +59,7 @@ class InitialScreenView: UIView {
     addSubview(stackView)
     stackView.addArrangedSubview(missionsButton)
     stackView.addArrangedSubview(medalsButton)
-    stackView.addArrangedSubview(emojiButton)
+    stackView.addArrangedSubview(askForHelpButton)
   }
   
   func setupConstraints() {
