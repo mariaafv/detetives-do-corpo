@@ -132,6 +132,8 @@ internal enum L10n {
   internal static let missionFinished = L10n.tr("Localizable", "missionFinished", fallback: "Missão concluída!")
   /// Mapa de missões
   internal static let missionsMap = L10n.tr("Localizable", "missionsMap", fallback: "Mapa de missões")
+  /// PRECISO DE AJUDA AGORA!
+  internal static let needHelpNow = L10n.tr("Localizable", "needHelpNow", fallback: "PRECISO DE AJUDA AGORA!")
   /// Missão 2: O toque da festa
   internal static let secondMissionTitle = L10n.tr("Localizable", "secondMissionTitle", fallback: "Missão 2: O toque da festa")
   /// Missão 3: O que é um segredo?
