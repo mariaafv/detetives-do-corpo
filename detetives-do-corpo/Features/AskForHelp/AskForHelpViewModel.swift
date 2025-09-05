@@ -1,29 +1,23 @@
 import Foundation
+import UIKit
 
 protocol AskForHelpViewModelProtocol: AnyObject {
-  func didTapMissionsButton()
-  func didTapMedalsButton()
+  func makePhoneCall(toNumber phoneNumber: String)
 }
 
-protocol AskForHelpNavigationDelegate: AnyObject {
-  func didTapMissionsButton()
-  func didTapMedalsButton()
-}
+class AskForHelpViewModel: AskForHelpViewModelProtocol {
+  func makePhoneCall(toNumber phoneNumber: String) {
+    let cleanedNumber = phoneNumber.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
 
-class AskForHelpViewModel {
-  private weak var navigationDelegate: AskForHelpNavigationDelegate?
-  
-  init(navigationDelegate: AskForHelpNavigationDelegate?) {
-    self.navigationDelegate = navigationDelegate
-  }
-}
-
-extension AskForHelpViewModel: AskForHelpViewModelProtocol {
-  func didTapMissionsButton() {
-    navigationDelegate?.didTapMissionsButton()
-  }
-  
-  func didTapMedalsButton() {
-    navigationDelegate?.didTapMedalsButton()
+    guard let phoneURL = URL(string: "tel://\(cleanedNumber)") else {
+      print("Erro: URL de telefone inválida.")
+      return
+    }
+    if UIApplication.shared.canOpenURL(phoneURL) {
+      UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
+    } else {
+      print("Este dispositivo não pode fazer chamadas telefônicas.")
+      // showAlert(title: "Não é possível ligar", message: "Este dispositivo não suporta chamadas.")
+    }
   }
 }

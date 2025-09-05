@@ -21,5 +21,15 @@ class AskForHelpViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    configureCallCard()
+  }
+  
+  func configureCallCard() {
+    let gesture = UITapGestureRecognizer(target: self, action: #selector(callCard))
+    baseView.cardUrgent.addGestureRecognizer(gesture)
+  }
+  
+  @objc func callCard() {
+    viewModel.makePhoneCall(toNumber: "100")
   }
 }

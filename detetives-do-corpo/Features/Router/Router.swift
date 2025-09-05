@@ -70,7 +70,7 @@ extension Router: InitialScreenNavigationDelegate {
   }
   
   func didTapAskForHelpButton() {
-    let viewModel = AskForHelpViewModel(navigationDelegate: self)
+    let viewModel = AskForHelpViewModel()
     let viewController = AskForHelpViewController(viewModel: viewModel)
     navigationController.pushViewController(viewController, animated: true)
   }
@@ -113,10 +113,6 @@ extension Router: MissionFinishedNavigationDelegate {
       }
     }
   }
-}
-
-extension Router: AskForHelpNavigationDelegate {
-  //code
 }
 
 extension Router {
