@@ -98,12 +98,18 @@ internal enum L10n {
   internal static let _4thMissionSecondScreenThirdAnswerBaloon = L10n.tr("Localizable", "4thMissionSecondScreenThirdAnswerBaloon", fallback: "Dizer que você não gosta de falar sobre isso porque o corpo é apenas seu e ninguém deve saber sobre ele")
   /// Finge que não aconteceu nada e continua a se trocar
   internal static let _4thMissionThirdAnswerBaloon = L10n.tr("Localizable", "4thMissionThirdAnswerBaloon", fallback: "Finge que não aconteceu nada e continua a se trocar")
+  /// Lembre-se: pedir ajuda é coisa de detetive corajoso!
+  internal static let askForHelpIsForBraveDetectives = L10n.tr("Localizable", "askForHelpIsForBraveDetectives", fallback: "Lembre-se: pedir ajuda é coisa de detetive corajoso!")
+  /// Peça ajuda para sua mãe, pai ou responsável
+  internal static let askForHelpToYourMom = L10n.tr("Localizable", "askForHelpToYourMom", fallback: "Peça ajuda para sua mãe, pai ou responsável")
   /// Disponível
   internal static let available = L10n.tr("Localizable", "available", fallback: "Disponível")
   /// Voltar
   internal static let back = L10n.tr("Localizable", "back", fallback: "Voltar")
   /// Bloqueada
   internal static let blocked = L10n.tr("Localizable", "blocked", fallback: "Bloqueada")
+  /// Disque 100 - Direitos Humanos
+  internal static let call100 = L10n.tr("Localizable", "call100", fallback: "Disque 100 - Direitos Humanos")
   /// Parabéns! Você e Lara conversaram com um adulto responsável e com isso ela está se sentindo mais segura.
   /// 
   ///  Você é um bom amigo e ganhou uma medalha!
@@ -126,6 +132,8 @@ internal enum L10n {
   internal static let fourthMissionTitle = L10n.tr("Localizable", "fourthMissionTitle", fallback: "Missão 4: O corpo é meu!")
   /// Peça ajuda
   internal static let help = L10n.tr("Localizable", "help", fallback: "Peça ajuda")
+  /// Detetive, se você estiver se sentindo triste, confuso(a) ou desconfortável, lembre-se: você pode pedir ajuda!
+  internal static let ifYouEverFeelSad = L10n.tr("Localizable", "ifYouEverFeelSad", fallback: "Detetive, se você estiver se sentindo triste, confuso(a) ou desconfortável, lembre-se: você pode pedir ajuda!")
   /// Medalhas
   internal static let medals = L10n.tr("Localizable", "medals", fallback: "Medalhas")
   /// Missão concluída!
@@ -134,8 +142,16 @@ internal enum L10n {
   internal static let missionsMap = L10n.tr("Localizable", "missionsMap", fallback: "Mapa de missões")
   /// PRECISO DE AJUDA AGORA!
   internal static let needHelpNow = L10n.tr("Localizable", "needHelpNow", fallback: "PRECISO DE AJUDA AGORA!")
+  /// Canal oficial para proteger crianças e adolescentes
+  internal static let oficialChanel = L10n.tr("Localizable", "oficialChanel", fallback: "Canal oficial para proteger crianças e adolescentes")
   /// Missão 2: O toque da festa
   internal static let secondMissionTitle = L10n.tr("Localizable", "secondMissionTitle", fallback: "Missão 2: O toque da festa")
+  /// Converse com um adulto de confiança
+  internal static let talkToAnAdult = L10n.tr("Localizable", "talkToAnAdult", fallback: "Converse com um adulto de confiança")
+  /// Converse com sua professora ou orientadora
+  internal static let talkToYourTeacher = L10n.tr("Localizable", "talkToYourTeacher", fallback: "Converse com sua professora ou orientadora")
+  /// Fale com alguém da escola
+  internal static let talkWithSomeoneAtSchool = L10n.tr("Localizable", "talkWithSomeoneAtSchool", fallback: "Fale com alguém da escola")
   /// Missão 3: O que é um segredo?
   internal static let thirdMissionTitle = L10n.tr("Localizable", "thirdMissionTitle", fallback: "Missão 3: O que é um segredo?")
   /// Olá, detetive!

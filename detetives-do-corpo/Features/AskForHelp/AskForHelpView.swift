@@ -22,7 +22,7 @@ class AskForHelpScreenView: UIView {
   
   private let descriptionText: UILabel = {
     let description = UILabel()
-    description.text = "Detetive, se você estiver se sentindo triste, confuso(a) ou desconfortável, lembre-se: você pode pedir ajuda!"
+    description.text = L10n.ifYouEverFeelSad
     description.numberOfLines = 0
     description.textAlignment = .center
     description.textColor = .white
@@ -53,7 +53,7 @@ class AskForHelpScreenView: UIView {
   
   private let cardUrgentLabel: UILabel = {
     let label = UILabel()
-    label.text = "PRECISO DE AJUDA AGORA!"
+    label.text = L10n.needHelpNow
     label.textColor = .white
     label.font = .systemFont(ofSize: 22, weight: .bold)
     label.translatesAutoresizingMaskIntoConstraints = false
@@ -69,7 +69,7 @@ class AskForHelpScreenView: UIView {
   
   private let descriptionLabel: UILabel = {
     let label = UILabel()
-    label.text = "Lembre-se: pedir ajuda é coisa de detetive corajoso!"
+    label.text = L10n.askForHelpIsForBraveDetectives
     label.numberOfLines = 0
     label.textAlignment = .center
     label.textColor = .white
@@ -131,7 +131,6 @@ class AskForHelpScreenView: UIView {
       cardsStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
       cardsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
       
-      // IMPORTANTE: Conecte a base da stack view à base do contentView para o scroll funcionar
       cardsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -40),
       
       cardUrgent.leadingAnchor.constraint(equalTo: cardsStackView.leadingAnchor),
@@ -150,8 +149,8 @@ class AskForHelpScreenView: UIView {
 
 extension AskForHelpScreenView {
   private func configureCards() {
-    card1.configure(icon: UIImage(systemName: "person.fill"), title: "Converse com um adulto de confiança", subtitle: "Peça ajuda para sua mãe, pai ou responsável")
-    card2.configure(icon: UIImage(systemName: "phone.badge.waveform.fill"), title: "Disque 100 - Direitos Humanos", subtitle: "Canal oficial para proteger crianças e adolescentes")
-    card3.configure(icon: UIImage(systemName: "house.and.flag.fill"), title: "Fale com alguém da escola", subtitle: "Converse com sua professora ou orientadora")
+    card1.configure(icon: UIImage(systemName: "person.fill"), title: L10n.talkToAnAdult, subtitle: L10n.askForHelpToYourMom)
+    card2.configure(icon: UIImage(systemName: "phone.badge.waveform.fill"), title: L10n.call100, subtitle: L10n.oficialChanel)
+    card3.configure(icon: UIImage(systemName: "house.and.flag.fill"), title: L10n.talkWithSomeoneAtSchool, subtitle: L10n.talkToYourTeacher)
   }
 }
